@@ -1,6 +1,7 @@
 
 body {
-    background: rgb(0, 0, 0);     /* red, blue, yellow, etc */
+    background-image: url("images/bg.png");   /* red, blue, yellow, etc */
+    background-size: cover;
     color: rgb(255, 255, 255);             /* red, blue, yellow, etc */
     font-size: 20px;        /* 0px - 100px and beyond */
     font-weight: lighter;   /* lighter, normal, bold  */
@@ -8,10 +9,35 @@ body {
     margin-top: 5px;        /* From 0px and upwards   */
 }
 
-.main-image{
-    width: 500px;
+.top{
+    background-color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
 }
 
-input{
-    width : 500px
+
+.bottom{
+    height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+}
+
+.mid_img{
+    height: 230px;
+    width: 380px;
+    border-radius: 15px;
+}
+
+.mid_btn{
+    margin: auto;
+    padding: 10px;
+    border-radius: 15px;
+
+}
+
+.cont_btn{
+    width: 25px;
+    border-radius: 15%;
 }
