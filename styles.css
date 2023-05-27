@@ -2,6 +2,7 @@
 body {
     background-image: url("images/bg.png");   /* red, blue, yellow, etc */
     background-size: cover;
+    background-repeat: round;
     color: rgb(255, 255, 255);             /* red, blue, yellow, etc */
     font-size: 20px;        /* 0px - 100px and beyond */
     font-weight: lighter;   /* lighter, normal, bold  */
