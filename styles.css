@@ -26,21 +26,23 @@ body {
     font-size: large;
 }
 
-footer{
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     text-align: center;
     position: absolute;
     display: block;
     margin-bottom: 0px;
     margin-top: auto;
-    bottom: 0px;
     border-radius: 15px;
     padding: 5px;
-    background-color: #000000;
 }
 
 .mid_img{
-    height: 230px;
-    width: 380px;
+    height: auto;
+    width: 40%;
     border-radius: 15px;
 }
 
