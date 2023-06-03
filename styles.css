@@ -6,7 +6,7 @@ html{
 }
 
 body {
-    height: max-content;
+    height: 100%;
     margin: 0px;
     padding: 0px;
     background-position: 0%;
@@ -25,9 +25,15 @@ body {
     font-size: large;
 }
 
-.footer{
+.mid{
     position: relative;
-    left: 0;
+    top: 25%;
+    bottom: 25%;
+}
+
+.footer{
+    position: fixed;
+    right: 0;
     bottom: 0;
     text-align: center;
     display: block;
