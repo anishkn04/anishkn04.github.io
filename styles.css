@@ -2,7 +2,7 @@ html{
     margin: 0px;
     padding: 0px;
     width: 100%;
-    height: 100%;
+    height: 15.8in;
 }
 
 body {
@@ -21,17 +21,18 @@ body {
 .top{
     color: azure;
     background-color: rgb(53, 47, 47);
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: large;
 }
 
 .mid{
-    position: relative;
-    top: 25%;
-    bottom: 25%;
+    position: absolute;
+    top: 35%;
 }
 
 .footer{
+    background-color:rgb(53, 47, 47);
+    color: azure;
     position: fixed;
     right: 0;
     bottom: 0;
