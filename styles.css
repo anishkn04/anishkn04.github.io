@@ -32,18 +32,6 @@ body {
     transition: 1s;
 }
 
-.wru:hover{
-    .footer{
-        background-color:rgb(53, 47, 47);
-        color: azure;
-        text-align: center;
-        width: 100%;
-        height: 100%;
-        padding: 5px;
-        border-radius: 10px 0px 0px 10px;
-    }
-}
-
 .nav-bar:hover{
     writing-mode: horizontal-tb;
     left: 0px;
