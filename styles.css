@@ -17,6 +17,55 @@ body {
     text-align: center;
 }
 
+.nav-bar{
+    background-color: rgb(53, 47, 47);
+    position: absolute;
+    margin-top: 5px;
+    color: antiquewhite;
+    padding: 10px;
+    border-radius: 0px 15px 15px 0px;
+    height: 100%;
+    left: -230px;
+    width: 250px;
+    writing-mode: vertical-rl;
+    text-align: center;
+    transition: 1s;
+}
+
+.wru:hover{
+    .footer{
+        background-color:rgb(53, 47, 47);
+        color: azure;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+        border-radius: 10px 0px 0px 10px;
+    }
+}
+
+.nav-bar:hover{
+    writing-mode: horizontal-tb;
+    left: 0px;
+    padding: auto;
+    justify-content: center;
+}
+
+.nav-options{
+    padding: 10px;
+    list-style: none;
+    text-align: center;
+}
+
+.nav-options-items{
+    margin: 50px;
+}
+
+.nav-options-anchors{
+    text-decoration: none;
+    color: antiquewhite;
+}
+
 .top{
     color: azure;
     background-color: rgb(53, 47, 47);
@@ -39,11 +88,12 @@ footer{
     margin-bottom: 0px;
     margin-top: auto;
     padding: 5px;
+    border-radius: 10px 0px 0px 10px;
 }
 
 .mid_img{
     height: auto;
-    width: 40%;
+    width: 80%;
     border-radius: 15px;
 }
 
@@ -67,4 +117,16 @@ footer{
 
 .gh_image{
     height: 25px;
+}
+
+@media screen and (max-width: 450px) {
+    .nav-bar{
+        height: 80%;
+        margin-top: 50px;
+    }
+    .nav-bar:hover{
+        height: 500px;
+        left: 15%;
+        border-radius: 15px;
+    }
 }
