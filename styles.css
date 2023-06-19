@@ -20,7 +20,7 @@ body {
 .nav-bar{
     background-color: rgb(53, 47, 47);
     position: absolute;
-    margin-top: 5px;
+    margin-top: 0px;
     color: antiquewhite;
     padding: 10px;
     border-radius: 0px 15px 15px 0px;
@@ -89,15 +89,11 @@ footer{
     margin: auto;
     padding: 10px;
     border-radius: 15px;
-    background-color: gray;
+    background-color: rgb(53, 47, 47);
     color: azure;
 
 }
-.mid_btn:hover{
-    background-color: #5300b9;
-    color: azure;
-    cursor: pointer;
-}
+
 
 .li_image{
     height: 25px;
