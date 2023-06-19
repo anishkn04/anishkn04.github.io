@@ -29,7 +29,7 @@ body {
     width: 250px;
     writing-mode: vertical-rl;
     text-align: center;
-    transition: 1s;
+    transition: 0.8s;
 }
 
 .nav-bar:hover{
