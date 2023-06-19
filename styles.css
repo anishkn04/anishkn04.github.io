@@ -9,12 +9,11 @@ body {
     margin: 0px;
     padding: 0px;
     background-position: 0%;
-    background-image: linear-gradient(to left top, #9115d4, #8148e2, #7565ea, #707cee, #7390ed, #7390ed, #7390ed, #7390ed, #707cee, #7565ea, #8148e2, #9115d4);
+    background-image: linear-gradient(to left bottom, #1c1c1c, #252525, #2e2e2e, #373737, #414141, #4a4a4a, #535353, #5c5c5c, #666667, #717171, #7b7c7c, #868787);
     background-size: cover;
     background-attachment: fixed;
     font-size: 20px;
     font-weight: normal;
-    text-align: center;
 }
 
 .nav-bar{
@@ -59,10 +58,15 @@ body {
     background-color: rgb(53, 47, 47);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: large;
+    padding-top: 10px;
+    height: 40px;
+    text-align: center;
 }
 
 .mid{
+    color: antiquewhite;
     bottom:50%;
+    text-align: center;
 }
 
 footer{
@@ -88,10 +92,15 @@ footer{
 .mid_btn{
     margin: auto;
     padding: 10px;
+    border-width: 3px;
     border-radius: 15px;
-    background-color: rgb(53, 47, 47);
+    background-color: rgba(0, 0, 0, 0);
     color: azure;
 
+}
+
+.mid_btn:hover{
+    background-color: #373737;
 }
 
 
@@ -104,13 +113,17 @@ footer{
 }
 
 @media screen and (max-width: 450px) {
+    .top{
+        border-radius: 0px 0px 10px 10px;
+    }
     .nav-bar{
         height: 80%;
         margin-top: 50px;
+        width: 240px;
     }
     .nav-bar:hover{
         height: 500px;
-        left: 15%;
+        left: 18%;
         border-radius: 15px;
     }
 }
