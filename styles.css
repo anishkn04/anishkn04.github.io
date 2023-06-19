@@ -22,6 +22,7 @@ body {
     margin-top: 0px;
     color: antiquewhite;
     padding: 10px;
+    padding-top: 50px;
     border-radius: 0px 15px 15px 0px;
     height: 100%;
     left: -230px;
@@ -117,13 +118,13 @@ footer{
         border-radius: 0px 0px 10px 10px;
     }
     .nav-bar{
-        height: 80%;
-        margin-top: 50px;
+        height: 70%;
+        margin-top: 100px;
         width: 240px;
     }
     .nav-bar:hover{
         height: 500px;
-        left: 18%;
+        left: 15%;
         border-radius: 15px;
     }
 }
