@@ -19,7 +19,7 @@ body {
 
 .nav-bar{
     background-color: rgb(53, 47, 47);
-    position: absolute;
+    position: fixed;
     margin-top: 0px;
     color: antiquewhite;
     padding: 10px;
