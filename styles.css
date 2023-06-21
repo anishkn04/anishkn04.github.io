@@ -49,6 +49,10 @@ body {
     margin: 50px;
 }
 
+.nav-options-items:hover{
+    font-size: large;
+}
+
 .nav-options-anchors{
     text-decoration: none;
     color: antiquewhite;
@@ -101,6 +105,9 @@ footer{
 }
 
 .mid_btn:hover{
+    font-size:medium;
+    width: auto;
+    cursor: pointer;
     background-color: #373737;
 }
 
@@ -111,6 +118,13 @@ footer{
 
 .gh_image{
     height: 25px;
+}
+.li_image:hover{
+    height: 30px;
+}
+
+.gh_image:hover{
+    height: 30px;
 }
 
 @media screen and (max-width: 450px) {
