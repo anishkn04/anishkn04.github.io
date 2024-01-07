@@ -5,22 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>Anish K. Neupane</title>
 </head>
 <body>
-    <body>
+    <body onload="checkMode()">
         <nav>
             <ul class="nav-list">
-                <li class="nav-list-items"><a class="nav-items" href="">Home</a></li>
-                <li class="nav-list-items"><a class="nav-items" href="">About Me</a></li>
-                <li class="nav-list-items"><a class="nav-items" href="">Contact Me</a></li>
-                <li class="nav-list-items"><a class="nav-items" href="">SomeMore</a></li>
-                <button id="themeButton">
-                    <span class="material-symbols-outlined">light_mode</span>
-                    <span class="material-symbols-outlined">dark_mode</span>
-                </button>
+                <li class="nav-list-items"><a class="nav-items" href="#main-container">Home</a></li>
+                <li class="nav-list-items"><a class="nav-items" href="#about-me">About Me</a></li>
+                <li class="nav-list-items"><a class="nav-items" href="#contact-me">Contact Me</a></li>
+                <li class="nav-list-items"><a class="nav-items" href="#">SomeMore</a></li>
+                <span id="themeButton">
+                    <span id="lightButton" class="material-symbols-outlined" onclick="changeMode(this.id)">light_mode</span>
+                    <span id="darkButton" class="material-symbols-outlined" onclick="changeMode(this.id)">dark_mode</span>
+                </span>
             </ul>
         </nav>
         <div id="main-container">
@@ -29,6 +30,8 @@
                 <br>
                 <span>I am figuring out the things that I should write here.</span>
             </div>
+            <div id="about-me"></div>
+            <div id="contact-me"></div>
         </div>
     </body>
     <footer></footer>
