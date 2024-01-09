@@ -1,29 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <script src="script.js"></script>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="shortcut icon" href="images/question_mark.svg" type="image/x-icon">
     <title>Anish K. Neupane</title>
 </head>
+
 <body>
+
     <body onload="checkMode()">
         <nav>
-            <ul class="nav-list">
+            <span id="mobile-contents">
+                <span id="menu"  class='material-symbols-outlined' onclick="displayMenu(this.id)">menu</span>
+                <span class="center" > Anish Neupane. </span>
+            </span>
+            <ul class="big-nav-list">
                 <li class="nav-list-items"><a class="nav-items" href="#main-container">Home</a></li>
                 <li class="nav-list-items"><a class="nav-items" href="#about-me">About Me</a></li>
+                <li class="nav-list-items"><a class="nav-items" href="#my-works">My Works</a></li>
                 <li class="nav-list-items"><a class="nav-items" href="#contact-me">Contact Me</a></li>
-                <li class="nav-list-items"><a class="nav-items" href="#">SomeMore</a></li>
                 <span id="themeButton">
-                    <span id="lightButton" class="material-symbols-outlined" onclick="changeMode(this.id)">light_mode</span>
-                    <span id="darkButton" class="material-symbols-outlined" onclick="changeMode(this.id)">dark_mode</span>
+                    <span id="lightButton" class="material-symbols-outlined"
+                        onclick="changeMode(this.id)">light_mode</span>
+                    <span id="darkButton" class="material-symbols-outlined"
+                        onclick="changeMode(this.id)">dark_mode</span>
                 </span>
             </ul>
         </nav>
+        <div id="mobile-menu">
+            <ul class="mobile-nav-list">
+                <li class="nav-list-items"><a class="nav-items" href="#main-container">Home</a></li>
+                <li class="nav-list-items"><a class="nav-items" href="#about-me">About Me</a></li>
+                <li class="nav-list-items"><a class="nav-items" href="#my-works">My Works</a></li>
+                <li class="nav-list-items"><a class="nav-items" href="#contact-me">Contact Me</a></li>
+                <li id="themeButton">
+                    <span id="lightButton" class="material-symbols-outlined" onclick="changeMode(this.id)">light_mode</span>
+                    <span id="darkButton" class="material-symbols-outlined" onclick="changeMode(this.id)">dark_mode</span>
+                </li>
+            </ul>
+        </div>
         <div id="main-container">
             <div id="main">
                 <span>Hello, this is Anish!</span>
@@ -31,9 +55,17 @@
                 <span>I am figuring out the things that I should write here.</span>
             </div>
             <div id="about-me"></div>
+            <div id="my-works">
+                <div class="collage">
+                    <div class="collage-item"><img src="" alt="" class="collage-img"><span class="collage-desc"></span></div>
+                    <div class="collage-item"><img src="" alt="" class="collage-img"><span class="collage-desc"></span></div>
+                    <div class="collage-item"><img src="" alt="" class="collage-img"><span class="collage-desc"></span></div>
+                </div>
+            </div>
             <div id="contact-me"></div>
         </div>
     </body>
     <footer></footer>
 </body>
+
 </html>

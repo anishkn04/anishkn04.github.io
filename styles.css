@@ -1,17 +1,18 @@
-:root{
-    --light: skyblue,lightblue, powderblue, lightblue;
-    --dark: slategray,  darkgray, dimgrey;
+:root {
+    --light: skyblue, lightblue, powderblue, lightblue;
+    --dark: slategray, darkgray, dimgrey;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Playfair Display', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Playfair Display", "Gill Sans", "Gill Sans MT", Calibri,
+        "Trebuchet MS", sans-serif;
 }
 
-body{
-    background: url("lightBG.jpg");
+body {
+    background: url("images/lightBG.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -19,7 +20,7 @@ body{
     height: 100%;
 }
 
-nav{
+nav {
     max-width: 100vw;
     width: 100%;
     position: sticky;
@@ -31,7 +32,7 @@ nav{
     padding-top: 10px;
 }
 
-.nav-list{
+.big-nav-list {
     margin-top: auto;
     width: 40%;
     display: flex;
@@ -40,12 +41,17 @@ nav{
     list-style: none;
     min-width: fit-content;
     border: 1px solid;
-    border-radius: 20px;
-    background: linear-gradient(90deg, hsla(259, 84%, 78%, .7) 0%, hsla(206, 67%, 75%, .7) 100%);
+    border-radius: 18px;
+    background: linear-gradient(
+        90deg,
+        hsla(259, 84%, 78%, 0.7) 0%,
+        hsla(206, 67%, 75%, 0.7) 100%
+    );
     backdrop-filter: blur(10px);
+    box-shadow: 2px 5px 10px;
 }
 
-.nav-items{
+.big-nav-list .nav-items {
     text-decoration: none;
     color: black;
     position: relative;
@@ -56,32 +62,94 @@ nav{
     width: 130px;
 }
 
-.nav-items:hover{
+.big-nav-list .nav-items:hover {
     border: 1px solid;
-    border-radius: 20px;
+    border-radius: 18px;
     color: snow;
     background-color: rgba(100, 149, 237, 0.1);
-    backdrop-filter: blur(50px);
     cursor: pointer;
 }
 
-#themeButton{
+#themeButton {
     border: 0;
     background-color: rgba(0, 0, 0, 0);
     margin: auto;
     padding: 10px;
 }
 
-#themeButton *:hover{
-    color: white;
+#themeButton *:hover {
     cursor: pointer;
 }
 
-#main-container{
-    padding-top: 60px;
+#lightButton:hover {
+    color: orange;
 }
 
-#main{
+#darkButton:hover {
+    color: white;
+}
+
+#main-container {
+    padding-top: 50px;
+}
+
+#mobile-contents,
+#mobile-menu {
+    display: none;
+}
+
+#main {
     padding: 20px;
     color: aliceblue;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+@media screen and (max-width: 620px) {
+    nav{
+        padding: 0;
+    }
+    .big-nav-list {
+        display: none;
+    }
+    #mobile-menu{
+        position: fixed;
+    }
+    #mobile-contents {
+        top: 0;
+        position: sticky;
+        width: 100vw;
+        font-size: large;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        background-color: antiquewhite;
+    }
+    .mobile-nav-list {
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
+        list-style: none;
+        width: 100vw;
+        justify-content:space-around;
+        align-items: center;
+        background-color: antiquewhite;
+        border-radius: 0 0 10px 10px;
+    }
+    #themeButton{
+        width: fit-content;
+        margin: 0;
+    }
+    .mobile-nav-list .nav-items {
+        text-decoration: none;
+        color: black;
+        display: flex;
+        padding: auto;
+    }
 }
