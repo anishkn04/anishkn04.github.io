@@ -1,6 +1,7 @@
-:root {
-    --light: skyblue, lightblue, powderblue, lightblue;
-    --dark: slategray, darkgray, dimgrey;
+:root{
+    --font-color-primary: black;
+    --font-color-secondary: snow;
+    --background-primary: aliceblue;
 }
 
 * {
@@ -42,18 +43,14 @@ nav {
     min-width: fit-content;
     border: 1px solid;
     border-radius: 18px;
-    background: linear-gradient(
-        90deg,
-        hsla(259, 84%, 78%, 0.7) 0%,
-        hsla(206, 67%, 75%, 0.7) 100%
-    );
+    background: #faebd799;
     backdrop-filter: blur(10px);
     box-shadow: 2px 5px 10px;
 }
 
 .big-nav-list .nav-items {
     text-decoration: none;
-    color: black;
+    color: var(--font-color);
     position: relative;
     display: flex;
     justify-content: center;
@@ -65,7 +62,7 @@ nav {
 .big-nav-list .nav-items:hover {
     border: 1px solid;
     border-radius: 18px;
-    color: snow;
+    color: var(--font-color-secondary);
     background-color: rgba(100, 149, 237, 0.1);
     cursor: pointer;
 }
@@ -90,7 +87,7 @@ nav {
 }
 
 #main-container {
-    padding-top: 50px;
+    padding: 50px;
 }
 
 #mobile-contents,
@@ -100,7 +97,7 @@ nav {
 
 #main {
     padding: 20px;
-    color: aliceblue;
+    color: var(--font-color-secondary);
 }
 
 .center {
@@ -110,16 +107,101 @@ nav {
     width: 100%;
 }
 
+#my-works {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.collage {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+
+.collage-item {
+    width: 100%;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.collage-img {
+    width: 100%;
+    border-radius: 18px;
+}
+
+.collage-desc{
+    overflow: none;
+    margin-top: -50px;
+    text-decoration: none;
+    color: var(--font-color-primary);
+    border-radius: 0 0 18px 18px;
+    display: flex;
+    flex-direction: column;
+    border: 0;
+    height: 50px;
+    background-color: var(--background-primary);
+    backdrop-filter: blur(5px);
+    width: 100%;
+    transition: ease 500ms;
+}
+
+.collage-title{
+    font-size: 1.5rem;
+}
+
+.collage-detail{
+    visibility:collapse;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.collage-desc:hover {
+    margin-top: -150px;
+    height: 150px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.collage-desc:hover > .collage-title{
+    border-bottom: 1px black;
+}
+
+.collage-desc:hover > * + .collage-detail{
+    height: 100%;
+    visibility: visible;
+}
+
+@media screen and (max-width: 900px) {
+    .collage {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media screen and (max-width: 620px) {
-    nav{
+    nav {
         padding: 0;
     }
     .big-nav-list {
         display: none;
     }
-    #mobile-menu{
+    #menu {
+        cursor: pointer;
+    }
+    #mobile-menu {
         position: fixed;
     }
+    #main-container {
+    padding: 10px;
+}
     #mobile-contents {
         top: 0;
         position: sticky;
@@ -129,7 +211,10 @@ nav {
         display: flex;
         align-items: center;
         padding: 20px;
-        background-color: antiquewhite;
+        background-color: var(--background-primary);
+    }
+    #my-works {
+        width: 100%;
     }
     .mobile-nav-list {
         display: flex;
@@ -137,19 +222,23 @@ nav {
         text-decoration: none;
         list-style: none;
         width: 100vw;
-        justify-content:space-around;
+        justify-content: space-around;
         align-items: center;
-        background-color: antiquewhite;
+        background-color: var(--background-primary);
         border-radius: 0 0 10px 10px;
     }
-    #themeButton{
+    #themeButton {
         width: fit-content;
         margin: 0;
     }
     .mobile-nav-list .nav-items {
         text-decoration: none;
-        color: black;
+        color: var(--font-color-primary);
         display: flex;
         padding: auto;
+    }
+
+    .collage-desc *{
+        font-size: 1rem;
     }
 }
