@@ -13,7 +13,7 @@
 }
 
 body {
-    background: url("images/lightBG.jpg");
+    background: url("./images/lightBG.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
