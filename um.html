@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site under Maintainance</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            gap: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        div {
+            flex-grow: 0;
+        }
+
+        div:has(img) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 50%;
+        }
+
+        img {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>This site is under maintainance.</h1>
+    </div>
+    <div>
+        <img src="./images/underConstruction.png" alt="Site under construction image">
+    </div>
+
+</body>
+
+</html>
