@@ -12,6 +12,8 @@
     flex-direction: column;
     justify-content: center;
     gap: 100px;
+    background-color: #424b54;
+    color: #FFF8E8;
 }
 
 nav {
