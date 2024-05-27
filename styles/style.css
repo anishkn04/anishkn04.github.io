@@ -825,7 +825,7 @@ html {
 }
 
 .bg-hero-image {
-  background-image: url('/images/hero-image.jpg');
+  background-image: url('/images/image.jpg');
 }
 
 .bg-cover {
@@ -1001,21 +1001,6 @@ html {
     padding: 2rem;
   }
 
-  .md\:px-60 {
-    padding-left: 15rem;
-    padding-right: 15rem;
-  }
-
-  .md\:py-4 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-
-  .md\:py-12 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-
   .md\:pl-36 {
     padding-left: 9rem;
   }
@@ -1047,14 +1032,14 @@ html {
     padding: 6rem;
   }
 
-  .lg\:py-12 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-
   .lg\:px-60 {
     padding-left: 15rem;
     padding-right: 15rem;
+  }
+
+  .lg\:py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   .lg\:text-lg {

@@ -3,7 +3,7 @@
         "name": "UIGF Converter",
         "description": "Converts the data format of paimon.moe to UIGF; Client side convertion",
         "link": "https://github.com/anishkn04/uigfConverter",
-        "image": "../images/hero-image.jpg",
+        "image": "../images/uigf.jpg",
         "stackUsed" : ["JS", "HTML", "CSS"]
     },
     {
