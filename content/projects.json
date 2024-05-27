@@ -1,0 +1,30 @@
+[
+    {
+        "name": "UIGF Converter",
+        "description": "Converts the data format of paimon.moe to UIGF; Client side convertion",
+        "link": "https://github.com/anishkn04/uigfConverter",
+        "image": "../images/hero-image.jpg",
+        "stackUsed" : ["JS", "HTML", "CSS"]
+    },
+    {
+        "name": "Confessions",
+        "description": "Confess and such; Collaborative - Worked in backend i.e. PHP",
+        "link": "https://crishav.com.np/conf",
+        "image": "../images/confessions.png",
+        "stackUsed" : ["PHP", "JS"]
+    },
+    {
+        "name": "Lab Report Management",
+        "description": "WebApp for Managing reports and patients' records for Medical Labs",
+        "link": "https://github.com/anishkn04/LabReport",
+        "image": "../images/labreport.png",
+        "stackUsed" : ["PHP", "JS"]
+    },
+    {
+        "name": "ExTension - Notes",
+        "description": "Notes and other resources for students",
+        "link": "https://github.com/anishkn04/JavaProject",
+        "image": "../images/extension.svg",
+        "stackUsed" : ["Java", "HTML", "CSS"]
+    }
+]

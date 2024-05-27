@@ -4,31 +4,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="./scripts/script.js"></script>
     <title>Anish K. Neupane</title>
 </head>
 
-<body>
-    <div id="root">
-        <h1 style="width: 100vw; text-align: center">Website is currently under construction.</h1>
-        <img height="200px" width="auto" src="./images/underConstruction.svg">
-        <div style="width: 100vw; text-align: center">Estimated wait time: <span id="waitTime"></span></div>
+<body onload="getData()">
+    <div id="root" class="min-h-screen max-w-screen flex flex-col">
+        <nav
+            class="left-0 top-0 w-screen md:w-36 z-30 h-12 md:h-screen fixed bg-blue-300 backdrop-blur-sm bg-opacity-35 text-black md:backdrop-blur-none md:bg-opacity-100 md:z-50">
+            <div class="w-full h-full text-center content-center md:hidden hover:cursor-pointer" id="mobile-nav"
+                onclick="toggleNavbar()">Open Navbar</div>
+            <ul id="nav-ul"
+                class="h-full hidden md:flex flex-col justify-around *:w-full *:text-center *:hover:cursor-pointer md:bg-slate-50 md:backdrop-blur-sm md:bg-opacity-50"
+                onclick="toggleNavbar()">
+                <li data-section="hero-section" onclick="scrollElement(this)">Home</li>
+                <li data-section="about-me" onclick="scrollElement(this)">About Me</li>
+                <li data-section="projects" onclick="scrollElement(this)">Projects</li>
+                <li data-section="contact-me" onclick="scrollElement(this)">Contact Me</li>
+            </ul>
+        </nav>
+        <section id="hero-section" class="h-screen bg-hero-image z-40 bg-cover bg-no-repeat md:pl-36">
+            <div id="hero-container"
+                class="h-full flex justify-center items-center text-5xl text-black bg-slate-300 bg-opacity-35 backdrop-blur-md">
+                <span class="animate-appear  px-4">Hello, I'm Anish Kumar Neupane 👋</span>
+            </div>
+        </section>
+        <main class="md:pl-36 h-fit text-black overflow-y-auto">
+            <section class="pt-12 flex justify-center items-center h-screen bg-slate-50" id="about-me">
+                <div data-aos="fade-right" data-aos-duration="800"
+                    class="h-full overflow-scroll w-full p-2 gap-4 text-sm md:p-4 md:text-base lg:p-24 xl:p-32 lg:text-lg xl:text-xl shadow-md">
+                    <p>I'm Anish Kumar Neupane, a software engineering student with a passion for creating innovative
+                        solutions 🚀. As I pursue my Bachelor's degree, I'm constantly seeking oppurtunities to improve
+                        my skills and stay up-to-date with the latest technologies 💻.</p>
+                    <p><br></p>
+                    <p>With a strong foundation in programming languages like PHP, Java, and JavaScript, I've completed
+                        several projects that showcase my abilities 🎯. From backend-focused PHP projects to a simple
+                        yet effective JavaScript client-side web application, I've enjoyed diving into different areas
+                        of software development. Recently, I've set my sights on learning and mastering Golang, excited
+                        to tap into its potential and apply it to real-world problems 💡.</p>
+                    <p><br></p>
+                    <p>In my free time, I love to code and tackle complex problems, always striving to find unique
+                        solutions that showcase my creativity 💡. I'm a strong advocate for open-source software and its
+                        potential to drive innovation and collaboration 🤝. I'm excited to learn from the open-source
+                        community and look forward to contributing to it in the future 🚀.</p>
+                </div>
+            </section>
+            <section class="pt-12 flex justify-center items-center min-h-screen h-fit bg-slate-200" id="projects">
+                <div id="projects-container"
+                    class="w-full h-full min-h-screen justify-center gap-2 md:p-8 lg:justify-around flex flex-wrap shadow-md">
+                    <div id="loading" class="w-full h-full text-9xl flex items-center justify-center">
+                        <span class="animate-spin z-0">🌀</span>
+                    </div>
+                    <!-- Project Div -->
+
+                </div>
+            </section>
+            <section class="pt-12 md-12 flex justify-center items-center h-screen bg-slate-50 shadow-md" id="contact-me">
+                <div class="flex flex-col md:flex-row w-full h-full justify-center">
+                    <div data-aos="zoom-in" data-aos-duration="800" id="first-container" class="flex-1 p-2 lg:py-12 lg:px-60 ">
+                        <div class="contact-details bg-slate-200 backdrop-blur-sm bg-opacity-35 h-full rounded-md p-2 flex flex-col shadow-md">
+                            <div class="title text-center border-b-2 border-blue-400">Social Media Handles</div>
+                            <div class="data flex flex-col justify-around items-center flex-1">
+                                <a data-aos="zoom-in" data-aos-duration="900" href="https://github.com/anishkn04" class="handle text-center flex gap-4 md:gap-12 items-center ">
+                                    <img class="w-9" src="./images/github.svg" alt=""></img>
+                                    <span >Github: @anishkn04</span>
+                                </a>
+                                <a data-aos="zoom-in" data-aos-duration="950" href="https://linkedin.com/in/anishkn04/" class="handle text-center flex gap-4 md:gap-12 items-center ">
+                                    <img class="w-9" src="./images/linkedin.png" alt=""></img>
+                                    <span >Linkedin: @anishkn04</span>
+                                </a>
+                                <a data-aos="zoom-in" data-aos-duration="1000" data-aos-anchor-placement="center" href="https://facebook.com/anishkn04" class="handle text-center flex gap-4 md:gap-12 items-center ">
+                                    <img class="w-9" src="./images/facebook.png" alt=""></img>
+                                    <span >Facebook: @anishkn04</span>
+                                </a>
+                                <a data-aos="zoom-in" data-aos-duration="1050" data-aos-anchor-placement="center-bottom" href="https://instagram.com/anishkn04" class="handle text-center flex gap-4 md:gap-12 items-center ">
+                                    <img class="w-9" src="./images/instagram.svg" alt=""></img>
+                                    <span >Instagram: @anishkn04</span>
+                                </a>
+                                <a data-aos="zoom-in" data-aos-duration="1100" data-aos-anchor-placement="bottom-bottom" href="mailto:anishnep51@gmail.com" class="handle text-center flex gap-4 md:gap-12 items-center ">
+                                    <img class="w-9" src="./images/email.svg" alt=""></img>
+                                    <span >Mail<span class="hidden md:inline">: anishnep1@gmail.com</span></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="shadow-lg md:pl-36 flex w-full h-full justify-center bg-blue-400 backdrop-blur-sm bg-opacity-35">
+            <span id="footer-content">©️Anish K. Neupane 2024</span>
+        </footer>
     </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        const waitSpan = document.querySelector("#waitTime");
-        const finalDate = new Date("2024-05-30")
-        setInterval(() => {
-            const currDate = new Date();
-            let estTimeInMs = finalDate - currDate;
-            const estDays = Math.floor(estTimeInMs / 86400000);
-            estTimeInMs -= estDays * 86400000;
-            const estHours = Math.floor((estTimeInMs) / 3600000)
-            estTimeInMs -= estHours * 3600000;
-            const estMinutes = Math.floor(estTimeInMs / 60000)
-            estTimeInMs -= estMinutes * 60000;
-            const estSeconds = Math.floor(estTimeInMs / 1000)
-            waitSpan.innerText = `${estDays} days, ${estHours} hours, ${estMinutes} minutes and ${estSeconds} seconds.`
-        }, 1000)
+        AOS.init();
     </script>
 </body>
 
