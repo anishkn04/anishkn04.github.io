@@ -19,6 +19,7 @@ function toggleNavbar() {
 }
 
 function scrollElement(el) {
+    console.log(el)
     const refSectionName = el.dataset.section;
     const refSection = document.getElementById(`${refSectionName}`);
     refSection.scrollIntoView({
@@ -54,7 +55,15 @@ const getData = async () => {
 
     if (finalHTML === "") {
         container.innerHTML = "Nothing Found!";
-    }else{
+    } else {
         container.innerHTML = finalHTML
     }
+}
+
+document.body.addEventListener("load", getData())
+document.getElementById("mobile-nav").addEventListener("click", toggleNavbar);
+document.getElementById("nav-ul").addEventListener("click", toggleNavbar);
+const navUlLists = document.getElementsByClassName("nav-ul-lists");
+for (const navUlList of navUlLists) {
+    navUlList.addEventListener("click", () => scrollElement(navUlList));
 }

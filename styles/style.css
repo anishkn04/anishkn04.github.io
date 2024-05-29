@@ -624,10 +624,6 @@ html {
   z-index: 30;
 }
 
-.z-40 {
-  z-index: 40;
-}
-
 .z-50 {
   z-index: 50;
 }
@@ -685,6 +681,10 @@ html {
   width: 2.25rem;
 }
 
+.w-\[70\%\] {
+  width: 70%;
+}
+
 .w-full {
   width: 100%;
 }
@@ -693,26 +693,20 @@ html {
   width: 100vw;
 }
 
+.w-\[90\%\] {
+  width: 90%;
+}
+
+.w-\[95\%\] {
+  width: 95%;
+}
+
 .max-w-44 {
   max-width: 11rem;
 }
 
 .flex-1 {
   flex: 1 1 0%;
-}
-
-@keyframes drop {
-  0% {
-    margin-top: -100vh;
-  }
-
-  100% {
-    margin-top: 0;
-  }
-}
-
-.animate-appear {
-  animation: drop 1.4s ease-in-out;
 }
 
 @keyframes spin {
@@ -749,20 +743,16 @@ html {
   justify-content: space-around;
 }
 
-.gap-2 {
-  gap: 0.5rem;
-}
-
 .gap-4 {
   gap: 1rem;
 }
 
-.overflow-hidden {
-  overflow: hidden;
+.gap-8 {
+  gap: 2rem;
 }
 
-.overflow-scroll {
-  overflow: scroll;
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .overflow-y-auto {
@@ -824,12 +814,24 @@ html {
   --tw-bg-opacity: 0.35;
 }
 
+.bg-opacity-50 {
+  --tw-bg-opacity: 0.5;
+}
+
+.bg-opacity-70 {
+  --tw-bg-opacity: 0.7;
+}
+
 .bg-hero-image {
-  background-image: url('/images/image.jpg');
+  background-image: url('/images/image.avif');
 }
 
 .bg-cover {
   background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
 }
 
 .bg-no-repeat {
@@ -847,6 +849,10 @@ html {
 
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-8 {
+  padding: 2rem;
 }
 
 .px-4 {
@@ -935,9 +941,19 @@ html {
   display: block;
 }
 
+@media (min-width: 640px) {
+  .sm\:w-\[80\] {
+    width: 80;
+  }
+
+  .sm\:w-\[80\%\] {
+    width: 80%;
+  }
+}
+
 @media (min-width: 768px) {
-  .md\:z-50 {
-    z-index: 50;
+  .md\:z-40 {
+    z-index: 40;
   }
 
   .md\:inline {
@@ -966,6 +982,10 @@ html {
 
   .md\:w-48 {
     width: 12rem;
+  }
+
+  .md\:w-\[70\%\] {
+    width: 70%;
   }
 
   .md\:max-w-48 {

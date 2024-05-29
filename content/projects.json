@@ -10,14 +10,14 @@
         "name": "Confessions",
         "description": "Confess and such; Collaborative - Worked in backend i.e. PHP",
         "link": "https://crishav.com.np/conf",
-        "image": "../images/confessions.png",
+        "image": "../images/confessions.avif",
         "stackUsed" : ["PHP", "JS"]
     },
     {
         "name": "Lab Report Management",
         "description": "WebApp for Managing reports and patients' records for Medical Labs",
         "link": "https://github.com/anishkn04/LabReport",
-        "image": "../images/labreport.png",
+        "image": "../images/labreport.avif",
         "stackUsed" : ["PHP", "JS"]
     },
     {
