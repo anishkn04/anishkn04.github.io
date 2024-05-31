@@ -26,5 +26,12 @@
         "link": "https://github.com/anishkn04/JavaProject",
         "image": "../images/extension.svg",
         "stackUsed" : ["Java", "HTML", "CSS"]
+    },
+    {
+        "name": "disgoBot - Discord Bot",
+        "description": "Bot for NTC to automate post sharing written in Golang",
+        "link": "https://github.com/anishkn04/disgoBot",
+        "image": "../images/disgoBot.avif",
+        "stackUsed" : ["Go"]
     }
 ]
