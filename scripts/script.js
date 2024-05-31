@@ -38,20 +38,20 @@ const getData = async () => {
     let finalHTML = "";
     dataArray.forEach(project => {
         finalHTML += `<a data-aos="fade-left" data-aos-duration="${animDuration}"
-                        class="project-container bg-white flex flex-col w-44 max-w-44 max-h-60 md:max-w-48 md:w-48 md:max-h-64 xl:max-w-52 xl:w-52 xl:max-h-72 items-center relative rounded-md overflow-hidden *:w-full group" target="_blank" href="${project.link}">
+                        class="project-container bg-slate-50 flex flex-col drop-shadow-md hover:drop-shadow-xl w-64 max-w-64 max-h-96 h-96 items-center relative rounded-md overflow-hidden *:w-full group" target="_blank" href="${project.link}">
                         <img src="${project.image}" alt="${project.name}"
-                            class="h-full aspect-square object-cover">
+                            class="h-[60%] w-[90]% p-4 rounded-md object-contain">
 
                         <div
-                            class="project-info bottom-0 max-w-44 max-h-60 md:max-w-48 md:max-h-64 xl:max-w-52 xl:max-h-72 absolute bg-slate-50">
-                            <div class="project-name text-center">${project.name}</div>
-                            <div class="project-desc hidden group-hover:block text-xs p-2">${project.description}</div>
-                            <div class="project-desc hidden group-hover:block text-xs p-2">Stack: ${project.stackUsed}</div>
+                            class="project-info flex-1 items-center flex flex-col bg-slate-50 p-2">
+                            <h1 class="project-name text-center font-bold">${project.name}</h1>
+                            <div class="project-desc group-hover:block text-xs md:text-sm flex-1 p-2">${project.description}</div>
+                            <div class="project-desc group-hover:block text-xs md:text-sm p-2">Stack: ${project.stackUsed}</div>
                         </div>
                     </a>`
-        animDuration += 500
+        animDuration += 200
     });
-    const container = document.getElementById("projects-container");
+    const container = document.getElementById("projects");
 
     if (finalHTML === "") {
         container.innerHTML = "Nothing Found!";

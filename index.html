@@ -14,35 +14,31 @@
 </head>
 
 <body>
-    <div id="root" class="min-h-screen max-w-screen flex flex-col">
+    <div id="root" class="min-h-screen max-w-screen flex flex-col overflow-x-hidden *:overflow-x-hidden">
         <nav
             class="left-0 top-0 w-screen md:w-36 z-30 h-12 md:h-screen fixed bg-blue-300 backdrop-blur-sm bg-opacity-35 text-black md:backdrop-blur-none md:bg-opacity-100 md:z-40">
             <div class="w-full h-full text-center content-center md:hidden hover:cursor-pointer" id="mobile-nav">
                 Open Navbar
             </div>
             <ul id="nav-ul"
-                class="h-full hidden md:flex flex-col justify-around *:w-full *:text-center *:hover:cursor-pointer md:bg-slate-50 backdrop-blur-sm bg-opacity-70">
+                class="h-full hidden md:flex flex-col justify-around *:w-full *:text-center *:hover:cursor-pointer md:bg-blue-300 backdrop-blur-sm bg-opacity-70">
                 <li data-section="hero-section" class="nav-ul-lists">Home</li>
                 <li data-section="about-me" class="nav-ul-lists">About Me</li>
                 <li data-section="projects" class="nav-ul-lists">Projects</li>
                 <li data-section="contact-me" class="nav-ul-lists">Contact Me</li>
             </ul>
         </nav>
-        <section id="hero-section" class="h-screen bg-hero-image bg-center z-50 bg-cover bg-no-repeat">
+        <section id="hero-section" class="h-screen bg-hero-image bg-top z-50 bg-cover bg-no-repeat">
             <div id="hero-container"
                 class="h-full flex justify-center items-center text-5xl text-black bg-slate-300 bg-opacity-50 backdrop-blur-md">
-                <div class=" px-4">
-                    <div data-aos="fade-down" data-aos-duration="500">Hello,</div>
-                    <div data-aos="fade-down" data-aos-duration="600">I'm</div> 
-                    <div data-aos="fade-up" data-aos-duration="500">Anish Kumar Neupane</div>
-                    <div data-aos="fade-up" data-aos-duration="600">👋</div>
+                <div class=" px-4" data-aos="fade-down" data-aos-duration="300">
+                    <div>Hello 👋</div>
+                    <div>I'm Anish Kumar Neupane !</div>
                 </div>
             </div>
         </section>
-        <main class="md:pl-36 h-fit text-black overflow-y-auto">
-            <section class="pt-12 flex justify-center items-center h-screen bg-slate-50" id="about-me">
-                <div data-aos="fade-right" data-aos-duration="800"
-                    class="h-full overflow-y-auto w-full p-2 gap-4 text-sm md:p-4 md:text-base lg:p-24 xl:p-32 lg:text-lg xl:text-xl shadow-md">
+        <main class="md:pl-36 h-fit text-black overflow-hidden">
+            <section data-aos="fade-right" data-aos-duration="800" class="pt-12 overflow-hidden *:overflow-hidden min-h-screen h-max bg-slate-50 w-full p-2 text-sm md:p-4 md:text-base lg:p-24 text-wrap lg:text-lg xl:text-xl shadow-md" id="about-me">
                     <p>I'm Anish Kumar Neupane, a software engineering student with a passion for creating innovative
                         solutions 🚀. As I pursue my Bachelor's degree, I'm constantly seeking oppurtunities to improve
                         my skills and stay up-to-date with the latest technologies 💻.</p>
@@ -57,59 +53,64 @@
                         solutions that showcase my creativity 💡. I'm a strong advocate for open-source software and its
                         potential to drive innovation and collaboration 🤝. I'm excited to learn from the open-source
                         community and look forward to contributing to it in the future 🚀.</p>
-                </div>
             </section>
-            <section class="pt-12 flex justify-center items-center min-h-screen h-fit bg-slate-200" id="projects">
-                <div id="projects-container"
-                    class="w-full h-full min-h-screen justify-center gap-8 md:p-8 lg:justify-around flex flex-wrap shadow-md">
+            <section class="pt-12 items-center min-h-screen h-full bg-slate-200 w-full justify-center gap-8 pb-4 md:p-8 lg:justify-around flex flex-wrap shadow-md" id="projects">
                     <div id="loading" class="w-full h-full text-9xl flex items-center justify-center">
                         <span class="animate-spin z-0">🌀</span>
                     </div>
                     <!-- Project Div -->
-
-                </div>
             </section>
-            <section class="pt-12 md-12 flex justify-center items-center h-screen bg-slate-50 shadow-md"
+            <section class="pt-12 md-12 grid grid-cols-1 lg:grid-cols-2 *:min-h-96 min-h-screen h-fit bg-slate-50 shadow-md"
                 id="contact-me">
-                <div class="flex flex-col w-full h-full justify-center items-center">
-                    <div data-aos="zoom-in" data-aos-duration="800" id="first-container"
-                        class="flex-1 w-[95%] overflow-hidden sm:w-[80%] md:w-[70%] p-8 lg:py-12 ">
+                    <div data-aos="zoom-out-left" data-aos-duration="800" data-aos-anchor-placement="bottom"  id="first-container"
+                        class="overflow-hidden p-8 lg:py-12 h-full">
                         <div
                             class="contact-details bg-slate-200 backdrop-blur-sm bg-opacity-35 h-full rounded-md p-2 flex flex-col shadow-md">
                             <div class="title text-center border-b-2 border-blue-400">Social Media Handles</div>
                             <div class="data flex overflow-hidden flex-col justify-around items-center flex-1">
-                                <a data-aos="zoom-in" data-aos-duration="900" href="https://github.com/anishkn04"
+                                <a data-aos="zoom-in" data-aos-duration="900" data-aos-anchor-placement="top-bottom"  href="https://github.com/anishkn04"
                                     class="handle text-center flex gap-4 md:gap-12 items-center ">
                                     <img class="w-9" src="./images/github.svg" alt=""></img>
                                     <span>Github: @anishkn04</span>
                                 </a>
-                                <a data-aos="zoom-in" data-aos-duration="950" href="https://linkedin.com/in/anishkn04/"
+                                <a data-aos="zoom-in" data-aos-duration="950" data-aos-anchor-placement="center"  href="https://linkedin.com/in/anishkn04/"
                                     class="handle text-center flex gap-4 md:gap-12 items-center ">
                                     <img class="w-9" src="./images/linkedin.png" alt=""></img>
                                     <span>Linkedin: @anishkn04</span>
                                 </a>
-                                <a data-aos="zoom-in" data-aos-duration="1000" data-aos-anchor-placement="center"
+                                <a data-aos="zoom-in" data-aos-duration="1000" data-aos-anchor-placement="center-bottom"
                                     href="https://facebook.com/anishkn04"
                                     class="handle text-center flex gap-4 md:gap-12 items-center ">
                                     <img class="w-9" src="./images/facebook.avif" alt=""></img>
                                     <span>Facebook: @anishkn04</span>
                                 </a>
-                                <a data-aos="zoom-in" data-aos-duration="1050" data-aos-anchor-placement="center-bottom"
+                                <a data-aos="zoom-in" data-aos-duration="1050" data-aos-anchor-placement="bottom"
                                     href="https://instagram.com/anishkn04"
                                     class="handle text-center flex gap-4 md:gap-12 items-center ">
                                     <img class="w-9" src="./images/instagram.avif" alt=""></img>
                                     <span>Instagram: @anishkn04</span>
                                 </a>
-                                <a data-aos="zoom-in" data-aos-duration="1100" data-aos-anchor-placement="bottom-bottom"
-                                    href="mailto:anishnep51@gmail.com"
-                                    class="handle text-center flex gap-4 md:gap-12 items-center ">
-                                    <img class="w-9" src="./images/email.svg" alt=""></img>
-                                    <span>Mail<span class="hidden md:inline">: anishnep1@gmail.com</span></span>
-                                </a>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <div data-aos="zoom-out-right" data-aos-duration="800" data-aos-anchor-placement="bottom" id="second-container"
+                        class="overflow-hidden p-8 lg:py-12 h-full">
+                        <div id="form-container" class="contact-details bg-slate-200 backdrop-blur-sm bg-opacity-35 h-full rounded-md p-2 flex flex-col shadow-md">
+                            <div class="title text-center border-b-2 border-blue-400">Contact me</div>
+                            <form action="https://formspree.io/f/xnqekjdk" method="POST"  class="data flex flex-col justify-around items-center flex-1 overflow-y-auto">
+                                <label>
+                                    Your email:
+                                    <input type="email" name="email" class="rounded-md p-2 w-full">
+                                </label>
+                                <label>
+                                    Your message:
+                                    <textarea name="message" class="rounded-md p-2 w-full"></textarea>
+                                </label>
+                                <!-- your other form fields go here -->
+                                <button type="submit" class="bg-blue-400 rounded-md px-4 py-2">Send</button>
+                            </form>
+                        </div>
+                    </div>
             </section>
         </main>
 
