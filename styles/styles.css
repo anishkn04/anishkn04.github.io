@@ -701,6 +701,28 @@ section {
   padding-left: 0;
 }
 
+#submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+#submit-btn .btn-text {
+  margin-right: 10px;
+}
+
+#submit-btn .btn-icon.white i {
+  color: white;
+}
+
 @media screen and (max-width: 600px) {
   header {
     padding: 0 !important;
