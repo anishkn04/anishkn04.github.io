@@ -208,7 +208,7 @@ section {
 /*About*/
 .about-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   padding-top: 3.5rem;
   padding-bottom: 5rem;
 }
@@ -285,7 +285,14 @@ section {
 .about-stats .progress-bars .progress-bar .prog-title {
   text-transform: uppercase;
   font-weight: 500;
+  text-align: justify;
 }
+
+.prog-title::before{
+  content: "➲ ";
+  font-size: 1.5em;
+}
+
 .about-stats .progress-bars .progress-bar .progress-con {
   display: flex;
   align-items: center;
