@@ -1,123 +1,267 @@
 :root {
-  --canvas: #f6f1e8;
-  --canvas-alt: #efe7da;
-  --ink: #15120f;
-  --body: #4f463c;
-  --muted: #787164;
-  --hairline: rgba(21, 18, 15, 0.12);
-  --mint: #c7dfcb;
-  --peach: #e9c3aa;
-  --lavender: #d4c1e7;
-  --sky: #b7cce2;
-  --shadow: 0 24px 70px rgba(47, 34, 22, 0.12);
-  --rail: 90px;
+    --canvas: #f6f1e8;
+    --canvas-alt: #efe7da;
+    --ink: #15120f;
+    --body: #4f463c;
+    --muted: #787164;
+    --hairline: rgba(21, 18, 15, 0.12);
+    --mint: #c7dfcb;
+    --peach: #e9c3aa;
+    --lavender: #d4c1e7;
+    --sky: #b7cce2;
+    --shadow: 0 24px 70px rgba(47, 34, 22, 0.12);
+    --rail: 90px;
+}
+
+[data-theme="dark"] {
+    --canvas: #181612;
+    --canvas-alt: #201d19;
+    --ink: #f0ebe2;
+    --body: #c4b9ad;
+    --muted: #8a8078;
+    --hairline: rgba(240, 235, 226, 0.1);
+    --shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+    --mint: #2d4a32;
+    --peach: #4a3228;
+    --lavender: #3a2f4a;
+    --sky: #253548;
+}
+
+[data-theme="dark"] body {
+    background:
+        radial-gradient(
+            circle at 12% 8%,
+            rgba(45, 74, 50, 0.35),
+            transparent 24%
+        ),
+        radial-gradient(
+            circle at 88% 10%,
+            rgba(74, 50, 40, 0.28),
+            transparent 26%
+        ),
+        radial-gradient(
+            circle at 78% 78%,
+            rgba(37, 53, 72, 0.25),
+            transparent 30%
+        ),
+        linear-gradient(180deg, #1a1714 0%, #181612 42%, #201d19 100%);
+    background-color: #181612;
+}
+
+[data-theme="dark"] body::before {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 72px 72px;
+    opacity: 0.16;
+}
+
+[data-theme="dark"] .collage-item {
+    background:
+        radial-gradient(
+            circle at 18% 14%,
+            rgba(255, 255, 255, 0.04),
+            transparent 26%
+        ),
+        linear-gradient(180deg, rgba(36, 32, 27, 0.98), rgba(28, 25, 21, 0.99));
+    border-color: rgba(240, 235, 226, 0.1);
+}
+
+[data-theme="dark"] .collage-item[data-tone="mint"] {
+    --tone: rgba(45, 74, 50, 0.3);
+}
+
+[data-theme="dark"] .collage-item[data-tone="peach"] {
+    --tone: rgba(74, 50, 40, 0.28);
+}
+
+[data-theme="dark"] .collage-item[data-tone="lavender"] {
+    --tone: rgba(58, 47, 74, 0.32);
+}
+
+[data-theme="dark"] .collage-item[data-tone="sky"] {
+    --tone: rgba(37, 53, 72, 0.32);
+}
+
+[data-theme="dark"] .mini-grid article,
+[data-theme="dark"] .project-strip article {
+    background: rgba(30, 27, 23, 0.72);
+    border-color: rgba(240, 235, 226, 0.1);
+}
+
+[data-theme="dark"] .social-row a {
+    background: rgba(240, 235, 226, 0.08);
+    border-color: rgba(240, 235, 226, 0.1);
+}
+
+[data-theme="dark"] .social-row a:hover,
+[data-theme="dark"] .social-row a:focus-visible {
+    background: rgba(240, 235, 226, 0.16);
+    border-color: rgba(240, 235, 226, 0.2);
+}
+
+[data-theme="dark"] .collage-item[open] .collage-rail {
+    border-bottom-color: rgba(240, 235, 226, 0.1);
+}
+
+[data-theme="dark"] .collage-art {
+    border-color: rgba(240, 235, 226, 0.1);
+    background:
+        radial-gradient(
+            circle at 28% 22%,
+            rgba(255, 255, 255, 0.06),
+            transparent 22%
+        ),
+        linear-gradient(135deg, rgba(45, 74, 50, 0.3), rgba(0, 0, 0, 0));
+}
+
+[data-theme="dark"] .collage-item[open] {
+    box-shadow:
+        0 0 0 2px var(--ink),
+        var(--shadow);
+}
+
+[data-theme="dark"] .theme-toggle {
+    background: rgba(240, 235, 226, 0.1);
+    border-color: rgba(240, 235, 226, 0.15);
+    color: var(--ink);
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+    background: rgba(240, 235, 226, 0.18);
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html,
 body {
-  width: 100%;
-  min-height: 100%;
+    width: 100%;
+    min-height: 100%;
 }
 
 html {
-  overflow-x: hidden;
-  overflow-y: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 body {
-  color: var(--body);
-  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  min-height: 100dvh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  background:
-    radial-gradient(circle at 12% 8%, rgba(215, 239, 227, 0.8), transparent 24%),
-    radial-gradient(circle at 88% 10%, rgba(233, 195, 170, 0.34), transparent 26%),
-    radial-gradient(circle at 78% 78%, rgba(183, 204, 226, 0.3), transparent 30%),
-    linear-gradient(180deg, #fbf7ef 0%, var(--canvas) 42%, var(--canvas-alt) 100%);
+    color: var(--body);
+    font-family:
+        "Inter",
+        system-ui,
+        -apple-system,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background:
+        radial-gradient(
+            circle at 12% 8%,
+            rgba(215, 239, 227, 0.8),
+            transparent 24%
+        ),
+        radial-gradient(
+            circle at 88% 10%,
+            rgba(233, 195, 170, 0.34),
+            transparent 26%
+        ),
+        radial-gradient(
+            circle at 78% 78%,
+            rgba(183, 204, 226, 0.3),
+            transparent 30%
+        ),
+        linear-gradient(
+            180deg,
+            #fbf7ef 0%,
+            var(--canvas) 42%,
+            var(--canvas-alt) 100%
+        );
 }
 
 .collage-item h1 {
-  font-size: clamp(1.5rem, 2.6vw, 2rem);
-  line-height: 1.05;
+    font-size: clamp(1.5rem, 2.6vw, 2rem);
+    line-height: 1.05;
 }
 
 .collage-item h2 {
-  font-size: clamp(1.05rem, 2vw, 1.25rem);
-  line-height: 1.2;
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    line-height: 1.2;
 }
 
 body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.18) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
-  background-size: 72px 72px;
-  opacity: 0.16;
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.18) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+    background-size: 72px 72px;
+    opacity: 0.16;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 button,
 input,
 textarea {
-  font: inherit;
+    font: inherit;
 }
 
 button {
-  border: 0;
+    border: 0;
 }
 
 img {
-  display: block;
-  max-width: 100%;
+    display: block;
+    max-width: 100%;
 }
 
 .main-content {
-  width: 100%;
-  min-height: 100dvh;
+    width: 100%;
+    min-height: 100dvh;
 }
 
 .single-canvas {
-  width: 100vw;
-  min-height: 100dvh;
-  height: auto;
-  padding: clamp(16px, 2vw, 28px);
-  display: grid;
-  grid-template-rows: auto auto;
-  gap: clamp(14px, 1.8vw, 22px);
+    width: 100%;
+    min-height: 100dvh;
+    height: auto;
+    padding: clamp(16px, 2vw, 28px);
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: clamp(14px, 1.8vw, 22px);
 }
 
 .canvas-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
 }
 
 .brand {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 12px;
-  min-width: 0;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 12px;
+    min-width: 0;
 }
 
 .brand-copy {
-  display: grid;
-  gap: 2px;
+    display: grid;
+    gap: 2px;
 }
 
 .brand-copy strong,
@@ -125,176 +269,255 @@ img {
 .collage-item h2,
 .mini-grid strong,
 .project-strip strong,
-.contact-list dt,
 .contact-list dd {
-  font-family: "Fraunces", Georgia, serif;
+    font-family: "Fraunces", Georgia, serif;
 }
 
 .brand-copy strong {
-  font-size: 1.02rem;
+    font-size: 1.02rem;
 }
 
 .brand-copy small {
-  display: block;
-  font-size: 0.8rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--muted);
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(23, 20, 16, 0.07);
+    border: 1px solid rgba(23, 20, 16, 0.1);
+    cursor: pointer;
+    font-size: 1.15rem;
+    transition:
+        background 200ms ease,
+        border-color 200ms ease,
+        transform 200ms ease;
+    flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+    background: rgba(23, 20, 16, 0.13);
+    transform: scale(1.08);
+}
+
+.theme-toggle:focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 2px;
 }
 
 .collage,
 .collage-item,
 .collage-body,
 .collage-copy {
-  min-width: 0;
-  min-height: 0;
+    min-width: 0;
+    min-height: 0;
 }
 
 .collage {
-  display: flex;
-  gap: 14px;
-  width: 100%;
-  height: auto;
-  align-items: stretch;
+    display: flex;
+    gap: 14px;
+    width: 100%;
+    height: auto;
+    align-items: stretch;
 }
 
 .collage-item {
-  position: relative;
-  flex: 0 0 var(--rail);
-  display: grid;
-  grid-template-columns: var(--rail) minmax(0, 1fr);
-  grid-template-rows: 1fr;
-  height: clamp(560px, 72dvh, 760px);
-  min-height: 0;
-  align-self: stretch;
-  border: 1px solid var(--hairline);
-  border-radius: 28px;
-  background:
-    radial-gradient(circle at 18% 14%, rgba(255, 255, 255, 0.82), transparent 26%),
-    linear-gradient(180deg, rgba(255, 252, 247, 0.96), rgba(244, 236, 225, 0.98));
-  box-shadow: var(--shadow);
-  overflow: hidden;
-  transition: flex-basis 380ms ease, flex-grow 380ms ease, transform 380ms ease, box-shadow 380ms ease;
+    position: relative;
+    flex: 0 0 var(--rail);
+    display: grid;
+    grid-template-columns: var(--rail) minmax(0, 1fr);
+    grid-template-rows: 1fr;
+    height: clamp(560px, 72dvh, 760px);
+    min-height: 0;
+    align-self: stretch;
+    border: 1px solid var(--hairline);
+    border-radius: 28px;
+    background:
+        radial-gradient(
+            circle at 18% 14%,
+            rgba(255, 255, 255, 0.82),
+            transparent 26%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(255, 252, 247, 0.96),
+            rgba(244, 236, 225, 0.98)
+        );
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition:
+        flex-basis 380ms ease,
+        flex-grow 380ms ease,
+        transform 380ms ease,
+        box-shadow 380ms ease;
 }
 
 .collage-item[data-tone="mint"] {
-  --tone: rgba(199, 223, 203, 0.26);
+    --tone: rgba(199, 223, 203, 0.26);
 }
 
 .collage-item[data-tone="peach"] {
-  --tone: rgba(233, 195, 170, 0.25);
+    --tone: rgba(233, 195, 170, 0.25);
 }
 
 .collage-item[data-tone="lavender"] {
-  --tone: rgba(212, 193, 231, 0.28);
+    --tone: rgba(212, 193, 231, 0.28);
 }
 
 .collage-item[data-tone="sky"] {
-  --tone: rgba(183, 204, 226, 0.28);
+    --tone: rgba(183, 204, 226, 0.28);
 }
 
 .collage-item::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(circle at 20% 20%, var(--tone), transparent 30%),
-    radial-gradient(circle at 82% 20%, rgba(255, 255, 255, 0.22), transparent 28%),
-    radial-gradient(circle at 74% 82%, rgba(255, 255, 255, 0.16), transparent 28%);
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 20% 20%, var(--tone), transparent 30%),
+        radial-gradient(
+            circle at 82% 20%,
+            rgba(255, 255, 255, 0.22),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 74% 82%,
+            rgba(255, 255, 255, 0.16),
+            transparent 28%
+        );
 }
 
 .collage-rail {
-  position: relative;
-  z-index: 1;
-  grid-column: 1;
-  grid-row: 1;
-  width: var(--rail);
-  height: 100%;
-  display: grid;
-  grid-template-rows: 1fr auto;
-  align-items: center;
-  justify-items: center;
-  gap: 10px;
-  padding: 18px 10px;
-  cursor: pointer;
-  list-style: none;
-  user-select: none;
-  outline: none;
+    position: relative;
+    z-index: 1;
+    grid-column: 1;
+    grid-row: 1;
+    width: var(--rail);
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+    padding: 18px 10px;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    outline: none;
 }
 
 .collage-rail::-webkit-details-marker {
-  display: none;
+    display: none;
 }
 
 .collage-item:not([open]) .collage-rail {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  min-height: 0;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    min-height: 0;
 }
 
 .collage-item[open] {
-  flex: 1 1 0;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr;
-  transform: translateY(-2px);
+    flex: 1 1 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    transform: translateY(-2px);
 }
 
 .collage-item[open] .collage-rail {
-  grid-column: 1;
-  grid-row: 1;
-  width: 100%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 16px 24px 14px;
-  border-bottom: 1px solid rgba(23, 20, 16, 0.1);
-  writing-mode: horizontal-tb;
-  transform-origin: left center;
-  animation: rail-unfold 420ms cubic-bezier(0.22, 1, 0.36, 1);
-  min-height: 0;
-  justify-items: start;
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px 24px 14px;
+    border-bottom: 1px solid rgba(23, 20, 16, 0.1);
+    writing-mode: horizontal-tb;
+    transform-origin: left center;
+    animation: rail-unfold 420ms cubic-bezier(0.22, 1, 0.36, 1);
+    min-height: 0;
+    justify-items: start;
 }
 
 .collage-item[open] .collage-name {
-  white-space: nowrap;
+    white-space: nowrap;
 }
 
 .collage-item[open] .collage-kicker {
-  white-space: nowrap;
-  text-align: right;
+    white-space: nowrap;
+    text-align: right;
 }
 
 .collage-body {
-  position: relative;
-  z-index: 1;
-  grid-column: 2;
-  grid-row: 1;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 18px;
-  padding: 24px 24px 24px 0;
-  align-items: start;
-  height: 100%;
-  min-height: 0;
-  overflow: hidden;
+    position: relative;
+    z-index: 1;
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    padding: 24px 24px 24px 0;
+    align-items: start;
+    min-height: 0;
+    overflow: hidden;
 }
 
 .collage-item[open] .collage-body {
-  grid-column: 1;
-  grid-row: 2;
-  padding: 18px 24px 24px;
+    grid-column: 1;
+    grid-row: 2;
+    padding: 18px 24px 24px;
+    /* stretch to fill the 1fr row; align-items:stretch so copy fills height */
+    align-self: stretch;
+    align-items: stretch;
+    overflow: hidden;
 }
 
 .collage-copy {
-  display: grid;
-  gap: 14px;
-  align-content: start;
-  overflow: auto;
-  max-height: 100%;
-  padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* flex-grow so it fills the body; min-* so it can shrink and scroll */
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 0;
+    padding-right: 6px;
+}
+
+.collage-copy::-webkit-scrollbar {
+    width: 5px;
+}
+
+.collage-copy::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.collage-copy::-webkit-scrollbar-thumb {
+    background: rgba(23, 20, 16, 0.18);
+    border-radius: 99px;
+}
+
+.collage-copy::-webkit-scrollbar-thumb:hover {
+    background: rgba(23, 20, 16, 0.32);
+}
+
+[data-theme="dark"] .collage-copy::-webkit-scrollbar-thumb {
+    background: rgba(240, 235, 226, 0.18);
+}
+
+[data-theme="dark"] .collage-copy::-webkit-scrollbar-thumb:hover {
+    background: rgba(240, 235, 226, 0.32);
 }
 
 .collage-item .collage-name,
@@ -309,354 +532,548 @@ img {
 .collage-item .social-row,
 .collage-item .collage-art,
 .collage-item .collage-body {
-  position: relative;
-  z-index: 1;
+    position: relative;
+    z-index: 1;
 }
 
 .collage-name {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--muted);
-  font-size: 0.76rem;
-  font-weight: 800;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  font-family: "Raleway", "Manrope", sans-serif;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
 }
 
 .collage-index {
-  color: var(--ink);
+    color: var(--ink);
 }
 
 .collage-kicker {
-  font-size: 0.74rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  font-family: "Raleway", "Manrope", sans-serif;
-  color: var(--body);
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+    color: var(--body);
 }
 
 .collage-item h1,
 .collage-item h2 {
-  line-height: 0.98;
-  letter-spacing: -0.04em;
+    line-height: 0.98;
+    letter-spacing: -0.04em;
 }
 
 .collage-item h1 {
-  font-size: clamp(2rem, 3.7vw, 4.5rem);
-  max-width: 12ch;
+    font-size: clamp(1.7rem, 2.6vw, 2.8rem);
+    max-width: 14ch;
 }
 
 .collage-item h2 {
-  font-size: clamp(1.75rem, 3vw, 3.1rem);
-  max-width: 13ch;
+    font-size: clamp(1.4rem, 2vw, 2.1rem);
+    max-width: 16ch;
 }
 
 .collage-item p {
-  max-width: 42ch;
-  line-height: 1.65;
-  font-size: 1rem;
-  color: var(--body);
+    max-width: 42ch;
+    line-height: 1.65;
+    font-size: 1rem;
+    color: var(--body);
 }
 
 .panel-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0;
 }
 
-.panel-links a,
-.social-row a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 42px;
-  padding: 0 14px;
-  border-radius: 999px;
-  background: rgba(23, 20, 16, 0.08);
-  border: 1px solid rgba(23, 20, 16, 0.08);
-  transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease;
+.panel-links a {
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 1rem;
+    color: var(--ink);
+    text-decoration: underline;
+    text-decoration-color: var(--hairline);
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+    transition: text-decoration-color 160ms ease;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
 }
 
 .panel-links a:hover,
-.panel-links a:focus-visible,
-.social-row a:hover,
-.social-row a:focus-visible {
-  transform: translateY(-1px);
-  background: rgba(23, 20, 16, 0.14);
-  border-color: rgba(23, 20, 16, 0.16);
-  outline: none;
+.panel-links a:focus-visible {
+    text-decoration-color: var(--ink);
+    background: none;
+    border: none;
+    transform: none;
+    outline: none;
+}
+
+.panel-links a:not(:last-child)::after {
+    content: "\00b7";
+    display: inline-block;
+    margin: 0 10px;
+    color: var(--muted);
+    font-size: 1rem;
+    text-decoration: none;
+    pointer-events: none;
 }
 
 .collage-art {
-  align-self: start;
-  border-radius: 24px;
-  min-height: 200px;
-  overflow: hidden;
-  border: 1px solid rgba(23, 20, 16, 0.08);
-  background:
-    radial-gradient(circle at 28% 22%, rgba(255, 255, 255, 0.78), transparent 22%),
-    radial-gradient(circle at 68% 28%, rgba(255, 255, 255, 0.52), transparent 18%),
-    linear-gradient(135deg, rgba(199, 223, 203, 0.54), rgba(255, 255, 255, 0));
+    align-self: start;
+    border-radius: 24px;
+    min-height: 200px;
+    overflow: hidden;
+    border: 1px solid rgba(23, 20, 16, 0.08);
+    background:
+        radial-gradient(
+            circle at 28% 22%,
+            rgba(255, 255, 255, 0.78),
+            transparent 22%
+        ),
+        radial-gradient(
+            circle at 68% 28%,
+            rgba(255, 255, 255, 0.52),
+            transparent 18%
+        ),
+        linear-gradient(
+            135deg,
+            rgba(199, 223, 203, 0.54),
+            rgba(255, 255, 255, 0)
+        );
 }
 
 .collage-art img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .collage-art--portrait {
-  max-width: 280px;
-  width: 100%;
-  height: clamp(300px, 40vw, 520px);
-  justify-self: end;
+    max-width: 280px;
+    width: 100%;
+    height: clamp(300px, 40vw, 520px);
+    justify-self: end;
 }
 
 .collage-art--portrait img {
-  object-position: center top;
+    object-position: center top;
 }
 
 .collage-item[data-index="0"] .collage-body {
-  grid-template-columns: minmax(0, 1.25fr) minmax(200px, 280px);
+    align-items: start;
+}
+
+.collage-item[data-index="0"] .collage-copy {
+    flex: 0 1 auto;
+    max-width: 45ch;
+}
+
+.collage-item[data-index="0"] .collage-art--portrait {
+    flex: 0 0 clamp(200px, 22vw, 280px);
+    align-self: start;
+    margin-left: auto;
 }
 
 .mini-grid,
 .project-strip,
 .contact-list {
-  display: grid;
-  gap: 10px;
+    display: grid;
+    gap: 10px;
 }
 
 .mini-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .mini-grid article,
 .project-strip article {
-  padding: 14px;
-  border-radius: 18px;
-  background: rgba(255, 252, 246, 0.72);
-  border: 1px solid var(--hairline);
+    padding: 14px;
+    border-radius: 18px;
+    background: rgba(255, 252, 246, 0.72);
+    border: 1px solid var(--hairline);
 }
 
 .mini-grid strong,
 .project-strip strong,
 .contact-list dt {
-  display: block;
-  margin-bottom: 6px;
-  font-size: 1.1rem;
-  line-height: 1.1;
-  color: var(--ink);
+    display: block;
+    margin-bottom: 6px;
+    font-size: 1.1rem;
+    line-height: 1.1;
+    color: var(--ink);
 }
 
 .project-strip {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.project-strip img {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  height: clamp(180px, 18vw, 230px);
-  object-fit: cover;
-  border-radius: 16px;
-  margin-bottom: 10px;
+.section-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-family: "Inter", sans-serif;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--hairline);
+}
+
+.pub-list {
+    display: grid;
+    gap: 0;
+}
+
+.pub-card {
+    display: grid;
+    grid-template-columns: 2ch 1fr;
+    gap: 0 14px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--hairline);
+    background: transparent;
+    border-radius: 0;
+    align-items: start;
+}
+
+.pub-card:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.pub-n {
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--muted);
+    line-height: 1.5;
+    padding-top: 1px;
+}
+
+.pub-content {
+    display: grid;
+    gap: 8px;
+}
+
+.pub-title {
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 1rem;
+    line-height: 1.38;
+    color: var(--ink);
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+.pub-title a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--hairline);
+    text-underline-offset: 3px;
+    transition: text-decoration-color 150ms ease;
+}
+
+.pub-title a:hover {
+    text-decoration-color: var(--muted);
+}
+
+.pub-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pub-venue {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.pub-doi {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    opacity: 0.7;
+    transition: opacity 150ms ease;
+}
+
+.pub-doi::before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--muted);
+    flex-shrink: 0;
+}
+
+.pub-doi:hover {
+    opacity: 1;
 }
 
 .contact-list {
-  gap: 14px;
+    gap: 14px;
 }
 
 .contact-list div {
-  display: grid;
-  gap: 4px;
+    display: grid;
+    gap: 4px;
 }
 
 .contact-list dt,
 .contact-list dd {
-  line-height: 1.2;
+    line-height: 1.2;
 }
 
 .contact-list dt {
-  font-size: 0.76rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  font-family: "Raleway", "Manrope", sans-serif;
+    font-size: 0.76rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
 }
 
 .contact-list dd {
-  font-size: 1.05rem;
-  color: var(--body);
+    font-size: 1.05rem;
+    color: var(--body);
 }
 
 .social-row {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .social-row a {
-  width: 44px;
-  padding: 0;
-  color: var(--ink);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(23, 20, 16, 0.06);
+    border: 1px solid var(--hairline);
+    color: var(--ink);
+    font-size: 0.9rem;
+    transition:
+        background 160ms ease,
+        border-color 160ms ease;
 }
 
-.collage-item:focus-within,
+.social-row a:hover,
+.social-row a:focus-visible {
+    background: rgba(23, 20, 16, 0.12);
+    border-color: rgba(23, 20, 16, 0.18);
+    outline: none;
+}
+
 .collage-item[open] {
-  box-shadow: 0 0 0 2px var(--ink), var(--shadow);
+    box-shadow:
+        0 0 0 2px var(--ink),
+        var(--shadow);
 }
 
 .collage-item summary:focus-visible {
-  box-shadow: inset 0 0 0 2px var(--ink);
-  border-radius: 22px;
+    box-shadow: inset 0 0 0 2px var(--ink);
+    border-radius: 22px;
 }
 
-.collage-item[open] .collage-copy {
-  overflow: auto;
-}
+/* overflow already set on .collage-copy base rule */
 
 .collage-item:not([open]) .collage-body {
-  display: none;
+    display: none;
 }
 
 @keyframes rail-unfold {
-  0% {
-    transform: translateX(-12px) rotate(-90deg);
-    opacity: 0.35;
-  }
+    0% {
+        transform: translateY(-6px);
+        opacity: 0;
+    }
 
-  100% {
-    transform: translateX(0) rotate(0deg);
-    opacity: 1;
-  }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 @media (max-width: 1100px) {
-  .single-canvas {
-    padding: 18px;
-  }
+    .single-canvas {
+        padding: 18px;
+    }
 
-  .canvas-head {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+    .canvas-head {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-  .collage {
-    flex-direction: column;
-    height: auto;
-  }
+    .collage {
+        flex-direction: column;
+        height: auto;
+    }
 
-  .collage-item,
-  .collage-item[open] {
-    flex: 0 0 auto;
-    min-height: 0;
-    height: clamp(460px, 62dvh, 620px);
-  }
+    .collage-item,
+    .collage-item[open] {
+        flex: 0 0 auto;
+        min-height: 0;
+        height: clamp(460px, 62dvh, 620px);
+    }
 
-  .collage-item:not([open]) .collage-rail {
-    writing-mode: horizontal-tb;
-    transform: none;
-    min-height: 0;
-    justify-items: start;
-  }
+    .collage-item:not([open]) .collage-rail {
+        writing-mode: horizontal-tb;
+        transform: none;
+        min-height: 0;
+        justify-items: start;
+    }
 
-  .collage-body {
-    grid-template-columns: 1fr;
-    padding: 18px;
-    height: 100%;
-  }
+    .collage-item {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+    }
 
-  .collage-item {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-  }
+    .collage-rail {
+        grid-column: 1;
+        grid-row: 1;
+        width: 100%;
+    }
 
-  .collage-rail {
-    grid-column: 1;
-    grid-row: 1;
-    width: 100%;
-  }
+    .collage-body {
+        grid-column: 1;
+        grid-row: 2;
+        display: none;
+    }
 
-  .collage-body {
-    grid-column: 1;
-    grid-row: 2;
-    display: none;
-  }
+    .collage-item[open] .collage-body {
+        display: flex;
+        padding: 18px;
+        overflow: hidden;
+        align-self: stretch;
+        align-items: stretch;
+    }
 
-  .collage-item[open] .collage-body {
-    display: grid;
-  }
-
-  .collage-art--portrait {
-    justify-self: start;
-    max-width: 100%;
-    width: min(100%, 320px);
-    height: 260px;
-  }
-
-  .project-strip img {
-    height: 150px;
-  }
+    .collage-art--portrait {
+        flex: 0 0 min(100%, 320px);
+        height: 260px;
+        align-self: start;
+    }
 }
 
 @media (max-width: 760px) {
-  .single-canvas {
-    padding: 14px;
-    gap: 12px;
-  }
+    .single-canvas {
+        padding: 14px;
+        gap: 12px;
+    }
 
-  .collage {
-    height: auto;
-  }
+    .collage {
+        height: auto;
+    }
 
-  .collage-item,
-  .collage-item[open] {
-    height: clamp(400px, 58dvh, 520px);
-  }
+    .collage-item {
+        height: auto;
+        overflow: hidden;
+        border-radius: 16px;
+    }
 
-  .brand-copy strong {
-    font-size: 0.96rem;
-  }
+    .collage-item[open] {
+        height: auto;
+        overflow: hidden;
+    }
 
-  .brand-copy small {
-    font-size: 0.74rem;
-  }
+    .collage-item:not([open]) {
+        min-height: 0;
+        overflow: hidden;
+    }
 
-  .collage-item h1 {
-    font-size: clamp(1.9rem, 8vw, 3rem);
-  }
+    .collage-body,
+    .collage-item[open] .collage-body {
+        flex-direction: column;
+        align-self: auto;
+        height: auto;
+        min-height: 0;
+        overflow: visible;
+        padding: 16px 18px 24px;
+    }
 
-  .collage-item h2 {
-    font-size: clamp(1.65rem, 7vw, 2.4rem);
-  }
+    .collage-copy {
+        flex: none;
+        overflow: visible;
+        min-height: 0;
+        padding-right: 0;
+    }
 
-  .mini-grid,
-  .project-strip {
-    grid-template-columns: 1fr;
-  }
+    .collage-item[open] .collage-rail {
+        flex-wrap: wrap;
+        gap: 4px 10px;
+        padding: 12px 16px 10px;
+    }
 
-  .collage-art {
-    min-height: 150px;
-  }
+    .collage-item[open] .collage-name,
+    .collage-item[open] .collage-kicker {
+        white-space: normal;
+        letter-spacing: 0.1em;
+        font-size: 0.68rem;
+    }
 
-  .collage-art--portrait {
-    height: 220px;
-    width: 100%;
-  }
+    .collage-item[data-index="0"] .collage-body {
+        flex-direction: column;
+    }
 
-  .project-strip img {
-    height: 130px;
-  }
+    .collage-item[data-index="0"] .collage-art--portrait {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+        height: 220px;
+    }
+
+    .collage-art--portrait {
+        flex: none;
+    }
+
+    .brand-copy strong {
+        font-size: 0.96rem;
+    }
+
+    .brand-copy small {
+        font-size: 0.74rem;
+    }
+
+    .collage-item h1 {
+        font-size: clamp(1.5rem, 6vw, 2.2rem);
+    }
+
+    .collage-item h2 {
+        font-size: clamp(1.25rem, 5vw, 1.8rem);
+    }
+
+    .mini-grid,
+    .project-strip {
+        grid-template-columns: 1fr;
+    }
+
+    .collage-art {
+        min-height: 150px;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation: none !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }

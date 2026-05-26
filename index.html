@@ -1,195 +1,489 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Anish K. Neupane personal portfolio as a single interactive collage."
+        />
+        <title>Anish K. Neupane</title>
+        <link rel="stylesheet" href="styles/styles.css" />
+        <link rel="shortcut icon" href="img/hero.jpg" type="image/x-icon" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+            integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600;700&family=Raleway:wght@600;700;800&display=swap"
+            rel="stylesheet"
+        />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Anish K. Neupane personal portfolio as a single interactive collage.">
-    <title>Anish K. Neupane</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="shortcut icon" href="img/hero.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-
-<body class="main-content">
-    <main class="single-canvas" aria-label="Anish K. Neupane portfolio collage">
-        <div class="canvas-head">
-            <a class="brand" href="./content/CV_Anish_KN.pdf" aria-label="Download CV">
-                <span class="brand-copy">
-                    <strong>Anish K. Neupane</strong>
-                    <small>Software Engineer / Kathmandu</small>
-                </span>
-            </a>
-        </div>
-
-        <div class="collage" data-active="0" aria-label="Interactive site collage">
-            <details class="collage-item is-active" data-index="0" data-tone="mint" open>
-                <summary class="collage-rail">
-                    <span class="collage-name"><span class="collage-index">01</span> Home</span>
-                    <span class="collage-kicker">Editorial intro</span>
-                </summary>
-                <div class="collage-body">
-                    <div class="collage-copy">
-                        <h1>Practical, platform-focused software engineering.</h1>
-                        <p>
-                            I’m Anish Kumar Neupane, a software engineer focused on backend systems, cloud platforms,
-                            and reliable services. I work across the stack when projects require it, prioritizing maintainable
-                            and secure solutions.
-                        </p>
-                        <div class="panel-links">
-                            <a href="./content/CV_Anish_KN.pdf">Download CV</a>
-                            <a href="mailto:anishnep51@gmail.com">Mail me</a>
-                        </div>
-                    </div>
-                    <span class="collage-art collage-art--portrait" aria-hidden="true">
-                        <img src="img/hero.png" alt="Photo of Anish Neupane">
+    <body class="main-content">
+        <main
+            class="single-canvas"
+            aria-label="Anish K. Neupane portfolio collage"
+        >
+            <div class="canvas-head">
+                <a
+                    class="brand"
+                    href="./content/CV_Anish_KN.pdf"
+                    aria-label="Download CV"
+                >
+                    <span class="brand-copy">
+                        <strong>Anish K. Neupane</strong>
+                        <small>Software Engineer / Kathmandu</small>
                     </span>
-                </div>
-            </details>
+                </a>
+                <button
+                    id="theme-toggle"
+                    class="theme-toggle"
+                    aria-label="Switch to light mode"
+                    title="Toggle dark/light mode"
+                >
+                    ☀️
+                </button>
+            </div>
 
-            <details class="collage-item" data-index="1" data-tone="peach">
-                <summary class="collage-rail">
-                    <span class="collage-name"><span class="collage-index">02</span> About</span>
-                    <span class="collage-kicker">Background</span>
-                </summary>
-                <div class="collage-body">
-                    <div class="collage-copy">
-                        <h2>Practical, collaborative, and always iterating.</h2>
-                        <p>
-                            I enjoy solving problems through programming, improving my skills in software development,
-                            project management, and collaboration, and contributing to open-source work.
-                        </p>
-                        <div class="mini-grid">
-                            <article>
-                                <strong>Education</strong>
-                                <span>BE in Software Engineering, Pokhara University — expected Dec 2026</span>
-                            </article>
-                            <article>
-                                <strong>Languages</strong>
-                                <span>Nepali, English, Hindi</span>
-                            </article>
+            <div
+                class="collage"
+                data-active="0"
+                aria-label="Interactive site collage"
+            >
+                <details
+                    class="collage-item is-active"
+                    data-index="0"
+                    data-tone="mint"
+                    open
+                >
+                    <summary class="collage-rail">
+                        <span class="collage-name"
+                            ><span class="collage-index">01</span> Home</span
+                        >
+                        <span class="collage-kicker">Editorial intro</span>
+                    </summary>
+                    <div class="collage-body">
+                        <div class="collage-copy">
+                            <h1>
+                                Practical, platform-focused software
+                                engineering.
+                            </h1>
+                            <p>
+                                I’m Anish Kumar Neupane, a software engineer
+                                focused on backend systems, cloud platforms, and
+                                reliable services. I work across the stack when
+                                projects require it, prioritizing maintainable
+                                and secure solutions.
+                            </p>
+                            <div class="panel-links">
+                                <a href="./content/CV_Anish_KN.pdf"
+                                    >Download CV</a
+                                >
+                                <a href="mailto:anishnep51@gmail.com"
+                                    >Mail me</a
+                                >
+                            </div>
+                        </div>
+                        <span
+                            class="collage-art collage-art--portrait"
+                            aria-hidden="true"
+                        >
+                            <img
+                                src="img/hero.jpg"
+                                alt="Photo of Anish Neupane"
+                            />
+                        </span>
+                    </div>
+                </details>
+
+                <details class="collage-item" data-index="1" data-tone="peach">
+                    <summary class="collage-rail">
+                        <span class="collage-name"
+                            ><span class="collage-index">02</span> About</span
+                        >
+                        <span class="collage-kicker">Background</span>
+                    </summary>
+                    <div class="collage-body">
+                        <div class="collage-copy">
+                            <h2>
+                                Practical, collaborative, and always iterating.
+                            </h2>
+                            <p>
+                                I enjoy solving problems through programming,
+                                improving my skills in software development,
+                                project management, and collaboration, and
+                                contributing to open-source work.
+                            </p>
+                            <div class="mini-grid">
+                                <article>
+                                    <strong>Education</strong>
+                                    <span
+                                        >BE in Software Engineering, Pokhara
+                                        University — expected Dec 2026</span
+                                    >
+                                </article>
+                                <article>
+                                    <strong>Languages</strong>
+                                    <span>Nepali, English, Hindi</span>
+                                </article>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </details>
+                </details>
 
-            <details class="collage-item" data-index="2" data-tone="lavender">
-                <summary class="collage-rail">
-                    <span class="collage-name"><span class="collage-index">03</span> Work</span>
-                    <span class="collage-kicker">Selected projects</span>
-                </summary>
-                <div class="collage-body">
-                    <div class="collage-copy">
-                        <h2>ActiveStudy and selected backend projects.</h2>
-                        <p>
-                            Highlighting recent platform work first — ActiveStudy (Rails) leads, followed by collaborative
-                            projects and smaller portfolio pieces.
-                        </p>
-                        <div class="project-strip">
-                            <article>
-                                <strong><a href="https://as.anishkn.com.np/" target="_blank" rel="noreferrer">ActiveStudy</a></strong>
-                                <span>Full-stack Ruby on Rails study group platform (AWS EC2, PostgreSQL, Sidekiq)</span>
-                            </article>
-                            <article>
-                                <strong><a href="https://github.com/anishkn04/AcadNet" target="_blank" rel="noreferrer">AcadNet</a></strong>
-                                <span>React + Node (TypeScript) collaborative academic platform</span>
-                            </article>
-                            <article>
-                                <strong><a href="https://github.com/anishkn04/GoTellem" target="_blank" rel="noreferrer">GoTellem</a></strong>
-                                <span>Real-time cross-platform message broadcaster (Discord, Facebook)</span>
-                            </article>
-                            <article>
-                                <strong>Confessions</strong>
-                                <span>Anonymous social-sharing web app with moderation tools, a lightweight backend, and PostgreSQL. Focused on simple UX and content moderation workflows.</span>
-                            </article>
-                            <article>
-                                <strong>disgoBot</strong>
-                                <span>Discord utility and moderation bot built with Node.js and discord.js; automates moderation, logging, and simple analytics for communities.</span>
-                            </article>
+                <details
+                    class="collage-item"
+                    data-index="2"
+                    data-tone="lavender"
+                >
+                    <summary class="collage-rail">
+                        <span class="collage-name"
+                            ><span class="collage-index">03</span> Work</span
+                        >
+                        <span class="collage-kicker">Selected projects</span>
+                    </summary>
+                    <div class="collage-body">
+                        <div class="collage-copy">
+                            <h2>ActiveStudy and selected backend projects.</h2>
+                            <p>
+                                Highlighting recent platform work first —
+                                ActiveStudy (Rails) leads, followed by
+                                collaborative projects and smaller portfolio
+                                pieces.
+                            </p>
+                            <div class="project-strip">
+                                <article>
+                                    <strong
+                                        ><a
+                                            href="https://as.anishkn.com.np/"
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            >ActiveStudy</a
+                                        ></strong
+                                    >
+                                    <span
+                                        >Full-stack Ruby on Rails study group
+                                        platform (AWS EC2, PostgreSQL,
+                                        Sidekiq)</span
+                                    >
+                                </article>
+                                <article>
+                                    <strong
+                                        ><a
+                                            href="https://github.com/anishkn04/AcadNet"
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            >AcadNet</a
+                                        ></strong
+                                    >
+                                    <span
+                                        >React + Node (TypeScript) collaborative
+                                        academic platform</span
+                                    >
+                                </article>
+                                <article>
+                                    <strong
+                                        ><a
+                                            href="https://github.com/anishkn04/GoTellem"
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            >GoTellem</a
+                                        ></strong
+                                    >
+                                    <span
+                                        >Real-time cross-platform message
+                                        broadcaster (Discord, Facebook)</span
+                                    >
+                                </article>
+                                <article>
+                                    <strong>Confessions</strong>
+                                    <span
+                                        >Anonymous social-sharing web app with
+                                        moderation tools, a lightweight backend,
+                                        and PostgreSQL. Focused on simple UX and
+                                        content moderation workflows.</span
+                                    >
+                                </article>
+                                <article>
+                                    <strong>disgoBot</strong>
+                                    <span
+                                        >Discord utility and moderation bot
+                                        built with Node.js and discord.js;
+                                        automates moderation, logging, and
+                                        simple analytics for communities.</span
+                                    >
+                                </article>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </details>
+                </details>
 
-            <details class="collage-item" data-index="3" data-tone="peach">
-                <summary class="collage-rail">
-                    <span class="collage-name"><span class="collage-index">04</span> Certifications</span>
-                    <span class="collage-kicker">Training & credentials</span>
-                </summary>
-                <div class="collage-body">
-                    <div class="collage-copy">
-                        <h2>Selected certifications and publications.</h2>
-                        <p>
-                            Professional certificates and peer-reviewed publications are listed below. Provider links and DOIs are included.
-                        </p>
-                        <div class="mini-grid">
-                            <article>
-                                <strong><a href="https://aws.amazon.com/training/aws-academy/" target="_blank" rel="noreferrer">AWS Academy Cloud Foundations</a></strong>
-                                <span>AWS Academy</span>
-                            </article>
-                            <article>
-                                <strong><a href="https://www.freecodecamp.org/news/relational-databases/" target="_blank" rel="noreferrer">Relational Databases (freeCodeCamp)</a></strong>
-                                <span>freeCodeCamp</span>
-                            </article>
-                            <article>
-                                <strong><a href="https://www.postman.com/" target="_blank" rel="noreferrer">Postman: API Fundamentals</a></strong>
-                                <span>Postman / Badgr</span>
-                            </article>
-                            <article>
-                                <strong><a href="https://www.datacamp.com/courses/intermediate-git" target="_blank" rel="noreferrer">Intermediate Git</a></strong>
-                                <span>DataCamp</span>
-                            </article>
-                            <article>
-                                <strong><a href="https://www.netacad.com/courses/cybersecurity/intro-to-cybersecurity" target="_blank" rel="noreferrer">Introduction to Cybersecurity</a></strong>
-                                <span>Cisco Networking Academy</span>
-                            </article>
-                            <article>
-                                <strong><a href="https://www.udemy.com/" target="_blank" rel="noreferrer">Python: The Professional Guide For Beginners</a></strong>
-                                <span>Udemy</span>
-                            </article>
+                <details class="collage-item" data-index="3" data-tone="peach">
+                    <summary class="collage-rail">
+                        <span class="collage-name"
+                            ><span class="collage-index">04</span>
+                            Certifications</span
+                        >
+                        <span class="collage-kicker"
+                            >Training & credentials</span
+                        >
+                    </summary>
+                    <div class="collage-body">
+                        <div class="collage-copy">
+                            <h2>Selected certifications and publications.</h2>
+                            <h3 class="section-label">Publications</h3>
+                            <div class="pub-list">
+                                <article class="pub-card">
+                                    <span class="pub-n" aria-hidden="true"
+                                        >01</span
+                                    >
+                                    <div class="pub-content">
+                                        <p class="pub-title">
+                                            <a
+                                                href="https://doi.org/10.65091/icicset.v2i1.30"
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                >Evaluation of Machine Learning
+                                                Techniques in Winner Predicting
+                                                of The Hundred Games</a
+                                            >
+                                        </p>
+                                        <footer class="pub-meta">
+                                            <span class="pub-venue"
+                                                >ICICSET 2025</span
+                                            >
+                                            <a
+                                                class="pub-doi"
+                                                href="https://doi.org/10.65091/icicset.v2i1.30"
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                >doi.org ↗</a
+                                            >
+                                        </footer>
+                                    </div>
+                                </article>
+                                <article class="pub-card">
+                                    <span class="pub-n" aria-hidden="true"
+                                        >02</span
+                                    >
+                                    <div class="pub-content">
+                                        <p class="pub-title">
+                                            <a
+                                                href="https://doi.org/10.65091/icicset.v2i1.20"
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                >Analyzing Behavior of
+                                                Agricultural Commodities in
+                                                Kalimati Tarkari Market using
+                                                Machine Learning Technique and
+                                                Prediction Strategies</a
+                                            >
+                                        </p>
+                                        <footer class="pub-meta">
+                                            <span class="pub-venue"
+                                                >ICICSET 2025</span
+                                            >
+                                            <a
+                                                class="pub-doi"
+                                                href="https://doi.org/10.65091/icicset.v2i1.20"
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                >doi.org ↗</a
+                                            >
+                                        </footer>
+                                    </div>
+                                </article>
+                            </div>
+                            <h3 class="section-label">Certifications</h3>
+                            <div class="pub-list">
+                                <article class="pub-card">
+                                    <span class="pub-n" aria-hidden="true"
+                                        >01</span
+                                    >
+                                    <div class="pub-content">
+                                        <p class="pub-title">
+                                            <a
+                                                href="https://aws.amazon.com/training/aws-academy/"
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                >AWS Academy Cloud
+                                                Foundations</a
+                                            >
+                                        </p>
+                                        <footer class="pub-meta">
+                                            <span class="pub-venue"
+                                                >AWS Academy</span
+                                            >
+                                        </footer>
+                                    </div>
+                                </article>
+                                <article class="pub-card">
+                                    <span class="pub-n" aria-hidden="true"
+                                        >02</span
+                                    >
+                                    <div class="pub-content">
+                                        <p class="pub-title">
+                                            <a
+                                                href="https://www.freecodecamp.org/news/relational-databases/"
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                >Relational Databases</a
+                                            >
+                                        </p>
+                                        <footer class="pub-meta">
+                                            <span class="pub-venue"
+                                                >freeCodeCamp</span
+                                            >
+                                        </footer>
+                                    </div>
+                                </article>
+                                <article class="pub-card">
+                                    <span class="pub-n" aria-hidden="true"
+                                        >03</span
+                                    >
+                                    <div class="pub-content">
+                                        <p class="pub-title">
+                                            <a
+                                                href="https://www.postman.com/"
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                >Postman: API Fundamentals</a
+                                            >
+                                        </p>
+                                        <footer class="pub-meta">
+                                            <span class="pub-venue"
+                                                >Postman / Badgr</span
+                                            >
+                                        </footer>
+                                    </div>
+                                </article>
+                                <article class="pub-card">
+                                    <span class="pub-n" aria-hidden="true"
+                                        >04</span
+                                    >
+                                    <div class="pub-content">
+                                        <p class="pub-title">
+                                            <a
+                                                href="https://www.datacamp.com/courses/intermediate-git"
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                >Intermediate Git</a
+                                            >
+                                        </p>
+                                        <footer class="pub-meta">
+                                            <span class="pub-venue"
+                                                >DataCamp</span
+                                            >
+                                        </footer>
+                                    </div>
+                                </article>
+                                <article class="pub-card">
+                                    <span class="pub-n" aria-hidden="true"
+                                        >05</span
+                                    >
+                                    <div class="pub-content">
+                                        <p class="pub-title">
+                                            <a
+                                                href="https://www.netacad.com/courses/cybersecurity/intro-to-cybersecurity"
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                >Introduction to
+                                                Cybersecurity</a
+                                            >
+                                        </p>
+                                        <footer class="pub-meta">
+                                            <span class="pub-venue"
+                                                >Cisco Networking Academy</span
+                                            >
+                                        </footer>
+                                    </div>
+                                </article>
+                                <article class="pub-card">
+                                    <span class="pub-n" aria-hidden="true"
+                                        >06</span
+                                    >
+                                    <div class="pub-content">
+                                        <p class="pub-title">
+                                            <a
+                                                href="https://www.udemy.com/"
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                >Python: The Professional Guide
+                                                For Beginners</a
+                                            >
+                                        </p>
+                                        <footer class="pub-meta">
+                                            <span class="pub-venue">Udemy</span>
+                                        </footer>
+                                    </div>
+                                </article>
+                            </div>
                         </div>
-                        <h3>Publications</h3>
-                        <ul>
-                            <li><a href="https://doi.org/10.65091/icicset.v2i1.30" target="_blank" rel="noreferrer">Evaluation of Machine Learning Techniques in Winner Predicting of The Hundred Games</a> — ICICSET 2025</li>
-                            <li><a href="https://doi.org/10.65091/icicset.v2i1.20" target="_blank" rel="noreferrer">Analyzing Behavior of Agricultural Commodities in Kalimati Tarkari Market using Machine Learning Technique and Prediction Strategies</a> — ICICSET 2025</li>
-                        </ul>
                     </div>
-                </div>
-            </details>
+                </details>
 
-            <details class="collage-item" data-index="4" data-tone="sky">
-                <summary class="collage-rail">
-                    <span class="collage-name"><span class="collage-index">05</span> Contact</span>
-                    <span class="collage-kicker">Reach out</span>
-                </summary>
-                <div class="collage-body">
-                    <div class="collage-copy">
-                        <h2>Let's build something clear and useful.</h2>
-                        <p>
-                            Reach out to discuss a software project, collaboration, or opportunities in backend and platform engineering.
-                        </p>
-                        <dl class="contact-list">
-                            <div><dt>Location</dt><dd>Kathmandu, Nepal</dd></div>
-                            <div><dt>Email</dt><dd><a href="mailto:anishnep51@gmail.com">anishnep51@gmail.com</a></dd></div>
-                        </dl>
-                        <div class="social-row" aria-label="Social links">
-                            <a href="https://www.facebook.com/anishkn04" target="_blank" rel="noreferrer"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.x.com/anishkn04" target="_blank" rel="noreferrer"><i class="fab fa-twitter"></i></a>
-                            <a href="https://www.github.com/anishkn04" target="_blank" rel="noreferrer"><i class="fab fa-github"></i></a>
+                <details class="collage-item" data-index="4" data-tone="sky">
+                    <summary class="collage-rail">
+                        <span class="collage-name"
+                            ><span class="collage-index">05</span> Contact</span
+                        >
+                        <span class="collage-kicker">Reach out</span>
+                    </summary>
+                    <div class="collage-body">
+                        <div class="collage-copy">
+                            <h2>Let's build something clear and useful.</h2>
+                            <p>
+                                Reach out to discuss a software project,
+                                collaboration, or opportunities in backend and
+                                platform engineering.
+                            </p>
+                            <dl class="contact-list">
+                                <div>
+                                    <dt>Location</dt>
+                                    <dd>Kathmandu, Nepal</dd>
+                                </div>
+                                <div>
+                                    <dt>Email</dt>
+                                    <dd>
+                                        <a href="mailto:anishnep51@gmail.com"
+                                            >anishnep51@gmail.com</a
+                                        >
+                                    </dd>
+                                </div>
+                            </dl>
+                            <div class="social-row" aria-label="Social links">
+                                <a
+                                    href="https://www.facebook.com/anishkn04"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    ><i class="fab fa-facebook-f"></i
+                                ></a>
+                                <a
+                                    href="https://www.x.com/anishkn04"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    ><i class="fab fa-twitter"></i
+                                ></a>
+                                <a
+                                    href="https://www.github.com/anishkn04"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    ><i class="fab fa-github"></i
+                                ></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </details>
-        </div>
-    </main>
+                </details>
+            </div>
+        </main>
 
-    <script src="app.js"></script>
-</body>
-
+        <script src="app.js"></script>
+    </body>
 </html>
