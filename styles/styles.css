@@ -495,6 +495,23 @@ img {
     padding-right: 6px;
 }
 
+#home-div {
+    gap: 0;
+}
+#home-div div {
+    max-width: unset;
+    flex-grow: 1;
+}
+
+#home-div div * {
+    max-width: unset;
+    text-wrap: balance;
+}
+
+#home-div span {
+    margin: 0;
+}
+
 .collage-copy::-webkit-scrollbar {
     width: 5px;
 }
