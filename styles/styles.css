@@ -5,11 +5,7 @@
     --body: #4f463c;
     --muted: #787164;
     --hairline: rgba(21, 18, 15, 0.12);
-    --mint: #c7dfcb;
-    --peach: #e9c3aa;
-    --lavender: #d4c1e7;
-    --sky: #b7cce2;
-    --shadow: 0 24px 70px rgba(47, 34, 22, 0.12);
+    --shadow: none;
     --rail: 90px;
 }
 
@@ -20,55 +16,47 @@
     --body: #c4b9ad;
     --muted: #8a8078;
     --hairline: rgba(240, 235, 226, 0.1);
-    --shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
-    --mint: #2d4a32;
-    --peach: #4a3228;
-    --lavender: #3a2f4a;
-    --sky: #253548;
+    --shadow: none;
 }
 
 [data-theme="dark"] body {
-    background: linear-gradient(180deg, #1a1714 0%, #181612 42%, #201d19 100%);
+    background: #181612;
     background-color: #181612;
 }
 
 [data-theme="dark"] body::before {
-    background-image:
-        linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    background-size: 72px 72px;
-    opacity: 0.16;
+    display: none;
 }
 
 [data-theme="dark"] .collage-item {
-    background: linear-gradient(180deg, rgba(36, 32, 27, 0.98), rgba(28, 25, 21, 0.99));
+    background: transparent;
     border-color: rgba(240, 235, 226, 0.1);
 }
 
 [data-theme="dark"] .collage-item[data-tone="mint"] {
-    --tone: rgba(45, 74, 50, 0.3);
+    --tone: transparent;
 }
 
 [data-theme="dark"] .collage-item[data-tone="peach"] {
-    --tone: rgba(74, 50, 40, 0.28);
+    --tone: transparent;
 }
 
 [data-theme="dark"] .collage-item[data-tone="lavender"] {
-    --tone: rgba(58, 47, 74, 0.32);
+    --tone: transparent;
 }
 
 [data-theme="dark"] .collage-item[data-tone="sky"] {
-    --tone: rgba(37, 53, 72, 0.32);
+    --tone: transparent;
 }
 
 [data-theme="dark"] .mini-grid article,
 [data-theme="dark"] .project-strip article {
-    background: rgba(30, 27, 23, 0.72);
+    background: transparent;
     border-color: rgba(240, 235, 226, 0.1);
 }
 
 [data-theme="dark"] .social-row a {
-    background: rgba(240, 235, 226, 0.08);
+    background: transparent;
     border-color: rgba(240, 235, 226, 0.1);
 }
 
@@ -84,7 +72,7 @@
 
 [data-theme="dark"] .collage-art {
     border-color: rgba(240, 235, 226, 0.1);
-    background: linear-gradient(135deg, rgba(45, 74, 50, 0.3), rgba(0, 0, 0, 0));
+    background: transparent;
 }
 
 [data-theme="dark"] .collage-item[open] {
@@ -136,12 +124,7 @@ body {
     min-height: 100dvh;
     overflow-x: hidden;
     overflow-y: auto;
-    background: linear-gradient(
-        180deg,
-        #fbf7ef 0%,
-        var(--canvas) 42%,
-        var(--canvas-alt) 100%
-    );
+    background: #fbf7ef;
 }
 
 .collage-item h1 {
@@ -159,11 +142,7 @@ body::before {
     position: fixed;
     inset: 0;
     pointer-events: none;
-    background-image:
-        linear-gradient(rgba(255, 255, 255, 0.18) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
-    background-size: 72px 72px;
-    opacity: 0.16;
+    display: none;
 }
 
 a {
@@ -247,8 +226,8 @@ img {
     justify-content: center;
     width: 42px;
     height: 42px;
-    border-radius: 50%;
-    background: rgba(23, 20, 16, 0.07);
+    border-radius: 0;
+    background: transparent;
     border: 1px solid rgba(23, 20, 16, 0.1);
     cursor: pointer;
     font-size: 1.15rem;
@@ -295,13 +274,9 @@ img {
     min-height: 0;
     align-self: stretch;
     border: 1px solid var(--hairline);
-    border-radius: 28px;
-    background: linear-gradient(
-        180deg,
-        rgba(255, 252, 247, 0.96),
-        rgba(244, 236, 225, 0.98)
-    );
-    box-shadow: var(--shadow);
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
     overflow: hidden;
     transition:
         flex-basis 380ms ease,
@@ -311,19 +286,19 @@ img {
 }
 
 .collage-item[data-tone="mint"] {
-    --tone: rgba(199, 223, 203, 0.26);
+    --tone: transparent;
 }
 
 .collage-item[data-tone="peach"] {
-    --tone: rgba(233, 195, 170, 0.25);
+    --tone: transparent;
 }
 
 .collage-item[data-tone="lavender"] {
-    --tone: rgba(212, 193, 231, 0.28);
+    --tone: transparent;
 }
 
 .collage-item[data-tone="sky"] {
-    --tone: rgba(183, 204, 226, 0.28);
+    --tone: transparent;
 }
 
 .collage-item::before {
@@ -525,16 +500,16 @@ img {
 
 .collage-item h1 {
     font-size: clamp(1.7rem, 2.6vw, 2.8rem);
-    max-width: 14ch;
+    max-width: none;
 }
 
 .collage-item h2 {
     font-size: clamp(1.4rem, 2vw, 2.1rem);
-    max-width: 16ch;
+    max-width: none;
 }
 
 .collage-item p {
-    max-width: 42ch;
+    max-width: none;
     line-height: 1.65;
     font-size: 1rem;
     color: var(--body);
@@ -584,15 +559,11 @@ img {
 
 .collage-art {
     align-self: start;
-    border-radius: 24px;
+    border-radius: 0;
     min-height: 200px;
     overflow: hidden;
     border: 1px solid rgba(23, 20, 16, 0.08);
-    background: linear-gradient(
-        135deg,
-        rgba(199, 223, 203, 0.54),
-        rgba(255, 255, 255, 0)
-    );
+    background: transparent;
 }
 
 .collage-art img {
@@ -641,8 +612,8 @@ img {
 .mini-grid article,
 .project-strip article {
     padding: 14px;
-    border-radius: 18px;
-    background: rgba(255, 252, 246, 0.72);
+    border-radius: 0;
+    background: transparent;
     border: 1px solid var(--hairline);
 }
 
@@ -808,8 +779,8 @@ img {
     justify-content: center;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
-    background: rgba(23, 20, 16, 0.06);
+    border-radius: 0;
+    background: transparent;
     border: 1px solid var(--hairline);
     color: var(--ink);
     font-size: 0.9rem;
@@ -1012,7 +983,7 @@ img {
 
     .collage-art {
         min-height: 150px;
-        border-radius: 16px;
+        border-radius: 0;
     }
 }
 
