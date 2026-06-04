@@ -1,6 +1,6 @@
 :root {
     --canvas: #f6f1e8;
-    --canvas-alt: #efe7da;
+    --canvas-alt: #f2efe9;
     --ink: #15120f;
     --body: #4f463c;
     --muted: #787164;
@@ -11,7 +11,7 @@
 
 [data-theme="dark"] {
     --canvas: #181612;
-    --canvas-alt: #201d19;
+    --canvas-alt: #23201d;
     --ink: #f0ebe2;
     --body: #c4b9ad;
     --muted: #8a8078;
@@ -658,6 +658,71 @@ img {
     height: 18px;
 }
 
+/* Project card visual refinements */
+.project-strip article {
+    background: linear-gradient(180deg, rgba(255,255,255,0.0), rgba(255,255,255,0.0));
+    padding: 14px;
+    border: 1px solid var(--hairline);
+    transition: box-shadow 160ms ease, transform 160ms ease;
+}
+.project-strip article:hover {
+    box-shadow: 0 6px 18px rgba(21,18,15,0.06);
+    transform: translateY(-4px);
+}
+.project-strip article strong {
+    display: block;
+    margin-bottom: 6px;
+}
+.project-strip article span {
+    color: var(--body);
+    display: block;
+    margin-bottom: 8px;
+}
+.project-meta div:first-child {
+    color: var(--muted);
+    font-weight: 600;
+}
+.project-meta div:last-child {
+    color: var(--body);
+}
+
+/* Experience list separators and alternating tones */
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.experience-list article {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--hairline);
+}
+.experience-list article:last-child {
+    border-bottom: none;
+}
+.experience-list article:nth-child(odd) {
+    background: var(--canvas-alt);
+}
+
+/* Dark theme adjustments for alternating tones */
+[data-theme="dark"] .experience-list article:nth-child(odd) {
+    background: rgba(240,235,226,0.02);
+}
+
+.experience-list article strong {
+    display: block;
+    margin-bottom: 6px;
+}
+.experience-list article span {
+    display: block;
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+.experience-list article p {
+    margin: 0;
+    color: var(--body);
+}
+
 .section-label {
     font-size: 0.68rem;
     font-weight: 700;
@@ -872,7 +937,7 @@ img {
     .collage-item[open] {
         flex: 0 0 auto;
         min-height: 0;
-        height: clamp(460px, 62dvh, 620px);
+        height: auto;
     }
 
     .collage-item:not([open]) .collage-rail {
@@ -901,16 +966,77 @@ img {
 
     .collage-item[open] .collage-body {
         display: flex;
-        padding: 18px;
-        overflow: hidden;
+        flex-direction: column;
+        height: auto;
+        min-height: 0;
+        overflow: visible;
+        padding: 16px 18px 24px;
         align-self: stretch;
         align-items: stretch;
     }
 
     .collage-art--portrait {
-        flex: 0 0 min(100%, 320px);
-        height: 260px;
-        align-self: start;
+        display: none;
+    }
+
+    .collage-copy {
+        flex: none;
+        overflow: visible;
+        min-height: 0;
+        padding-right: 0;
+    }
+
+    .collage-item[open] .collage-rail {
+        flex-wrap: wrap;
+        gap: 4px 10px;
+        padding: 12px 16px 10px;
+    }
+
+    .collage-item[open] .collage-name,
+    .collage-item[open] .collage-kicker {
+        white-space: normal;
+        letter-spacing: 0.1em;
+        font-size: 0.68rem;
+    }
+
+    .collage-item[data-index="0"] .collage-body {
+        flex-direction: column;
+    }
+
+    .collage-item[data-index="0"] .collage-art--portrait {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 20;
+        max-height: 400px;
+    }
+
+    .mini-grid,
+    .project-strip {
+        grid-template-columns: 1fr;
+    }
+
+    .project-strip {
+        gap: 12px;
+    }
+
+    .mini-grid {
+        gap: 12px;
+    }
+
+    .mini-grid article,
+    .project-strip article {
+        min-height: 0;
+    }
+
+    .project-strip article:hover {
+        transform: none;
+    }
+
+    .collage-art {
+        min-height: 150px;
+        border-radius: 0;
     }
 }
 
@@ -927,12 +1053,13 @@ img {
     .collage-item {
         height: auto;
         overflow: hidden;
-        border-radius: 12px;
+        border-radius: 0;
     }
 
     .collage-item[open] {
         height: auto;
         overflow: hidden;
+        border-radius: 0;
     }
 
     .collage-item:not([open]) {
@@ -1011,6 +1138,10 @@ img {
     .collage-art {
         min-height: 150px;
         border-radius: 0;
+    }
+
+    .collage-art--portrait {
+        display: none;
     }
 }
 
