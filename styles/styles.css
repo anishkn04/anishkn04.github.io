@@ -28,23 +28,7 @@
 }
 
 [data-theme="dark"] body {
-    background:
-        radial-gradient(
-            circle at 12% 8%,
-            rgba(45, 74, 50, 0.35),
-            transparent 24%
-        ),
-        radial-gradient(
-            circle at 88% 10%,
-            rgba(74, 50, 40, 0.28),
-            transparent 26%
-        ),
-        radial-gradient(
-            circle at 78% 78%,
-            rgba(37, 53, 72, 0.25),
-            transparent 30%
-        ),
-        linear-gradient(180deg, #1a1714 0%, #181612 42%, #201d19 100%);
+    background: linear-gradient(180deg, #1a1714 0%, #181612 42%, #201d19 100%);
     background-color: #181612;
 }
 
@@ -57,13 +41,7 @@
 }
 
 [data-theme="dark"] .collage-item {
-    background:
-        radial-gradient(
-            circle at 18% 14%,
-            rgba(255, 255, 255, 0.04),
-            transparent 26%
-        ),
-        linear-gradient(180deg, rgba(36, 32, 27, 0.98), rgba(28, 25, 21, 0.99));
+    background: linear-gradient(180deg, rgba(36, 32, 27, 0.98), rgba(28, 25, 21, 0.99));
     border-color: rgba(240, 235, 226, 0.1);
 }
 
@@ -106,13 +84,7 @@
 
 [data-theme="dark"] .collage-art {
     border-color: rgba(240, 235, 226, 0.1);
-    background:
-        radial-gradient(
-            circle at 28% 22%,
-            rgba(255, 255, 255, 0.06),
-            transparent 22%
-        ),
-        linear-gradient(135deg, rgba(45, 74, 50, 0.3), rgba(0, 0, 0, 0));
+    background: linear-gradient(135deg, rgba(45, 74, 50, 0.3), rgba(0, 0, 0, 0));
 }
 
 [data-theme="dark"] .collage-item[open] {
@@ -164,28 +136,12 @@ body {
     min-height: 100dvh;
     overflow-x: hidden;
     overflow-y: auto;
-    background:
-        radial-gradient(
-            circle at 12% 8%,
-            rgba(215, 239, 227, 0.8),
-            transparent 24%
-        ),
-        radial-gradient(
-            circle at 88% 10%,
-            rgba(233, 195, 170, 0.34),
-            transparent 26%
-        ),
-        radial-gradient(
-            circle at 78% 78%,
-            rgba(183, 204, 226, 0.3),
-            transparent 30%
-        ),
-        linear-gradient(
-            180deg,
-            #fbf7ef 0%,
-            var(--canvas) 42%,
-            var(--canvas-alt) 100%
-        );
+    background: linear-gradient(
+        180deg,
+        #fbf7ef 0%,
+        var(--canvas) 42%,
+        var(--canvas-alt) 100%
+    );
 }
 
 .collage-item h1 {
@@ -340,17 +296,11 @@ img {
     align-self: stretch;
     border: 1px solid var(--hairline);
     border-radius: 28px;
-    background:
-        radial-gradient(
-            circle at 18% 14%,
-            rgba(255, 255, 255, 0.82),
-            transparent 26%
-        ),
-        linear-gradient(
-            180deg,
-            rgba(255, 252, 247, 0.96),
-            rgba(244, 236, 225, 0.98)
-        );
+    background: linear-gradient(
+        180deg,
+        rgba(255, 252, 247, 0.96),
+        rgba(244, 236, 225, 0.98)
+    );
     box-shadow: var(--shadow);
     overflow: hidden;
     transition:
@@ -381,18 +331,7 @@ img {
     position: absolute;
     inset: 0;
     pointer-events: none;
-    background:
-        radial-gradient(circle at 20% 20%, var(--tone), transparent 30%),
-        radial-gradient(
-            circle at 82% 20%,
-            rgba(255, 255, 255, 0.22),
-            transparent 28%
-        ),
-        radial-gradient(
-            circle at 74% 82%,
-            rgba(255, 255, 255, 0.16),
-            transparent 28%
-        );
+    background: transparent;
 }
 
 .collage-rail {
@@ -649,22 +588,11 @@ img {
     min-height: 200px;
     overflow: hidden;
     border: 1px solid rgba(23, 20, 16, 0.08);
-    background:
-        radial-gradient(
-            circle at 28% 22%,
-            rgba(255, 255, 255, 0.78),
-            transparent 22%
-        ),
-        radial-gradient(
-            circle at 68% 28%,
-            rgba(255, 255, 255, 0.52),
-            transparent 18%
-        ),
-        linear-gradient(
-            135deg,
-            rgba(199, 223, 203, 0.54),
-            rgba(255, 255, 255, 0)
-        );
+    background: linear-gradient(
+        135deg,
+        rgba(199, 223, 203, 0.54),
+        rgba(255, 255, 255, 0)
+    );
 }
 
 .collage-art img {
@@ -1001,7 +929,7 @@ img {
     .collage-item {
         height: auto;
         overflow: hidden;
-        border-radius: 16px;
+        border-radius: 12px;
     }
 
     .collage-item[open] {
@@ -1052,7 +980,9 @@ img {
         flex: none;
         width: 100%;
         max-width: 100%;
-        height: 220px;
+        height: auto;
+        aspect-ratio: 16 / 20;
+        max-height: 400px;
     }
 
     .collage-art--portrait {
@@ -1082,6 +1012,7 @@ img {
 
     .collage-art {
         min-height: 150px;
+        border-radius: 16px;
     }
 }
 
