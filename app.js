@@ -38,7 +38,7 @@
 
   const syncPanelSizes = () => {
     if (isMobile()) {
-      // On mobile, remove all JS-set heights — CSS handles it
+      // On mobile, remove all JS-set heights; CSS handles it
       if (collage) collage.style.height = "";
       panels.forEach((panel) => {
         panel.style.height = "";

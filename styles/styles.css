@@ -631,6 +631,33 @@ img {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+/* Ensure project cards align and have consistent height */
+.project-strip article {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 110px;
+}
+.project-meta div {
+    margin-top: 6px;
+    color: var(--body);
+    font-size: 0.95rem;
+}
+
+/* Make mini-grid boxes align to same height */
+.mini-grid {
+    align-items: stretch;
+}
+.mini-grid article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.exp-gap {
+    height: 18px;
+}
+
 .section-label {
     font-size: 0.68rem;
     font-weight: 700;
