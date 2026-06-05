@@ -1,12 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Anish K. Neupane favicon">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#181612" />
-      <stop offset="100%" stop-color="#2a241d" />
-    </linearGradient>
-  </defs>
-  <rect width="256" height="256" rx="56" fill="url(#bg)" />
-  <rect x="18" y="18" width="220" height="220" rx="46" fill="none" stroke="#f0ebe2" stroke-opacity="0.14" stroke-width="4" />
-  <path d="M128 52 L188 204 H161 L149 172 H107 L95 204 H68 L128 52 Z M117 151 H139 L128 119 L117 151 Z" fill="#f0ebe2" />
-  <circle cx="192" cy="64" r="10" fill="#cfa86a" />
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="Anish K. Neupane favicon" role="img" viewBox="0 0 256 256"><defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="#181612"/><stop offset="100%" stop-color="#2a241d"/></linearGradient></defs><rect width="256" height="256" fill="url(#bg)" rx="56"/><rect width="220" height="220" x="18" y="18" fill="none" stroke="#f0ebe2" stroke-opacity=".14" stroke-width="4" rx="46"/><path fill="#f0ebe2" d="M128 52 L188 204 H161 L149 172 H107 L95 204 H68 L128 52 Z M117 151 H139 L128 119 L117 151 Z"/><circle cx="192" cy="64" r="10" fill="#cfa86a"/></svg>
