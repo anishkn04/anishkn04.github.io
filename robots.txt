@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: 
-Disallow: /content/
-Disallow: /img/
-Disallow: /styles/
+Allow: /
+
+Sitemap: https://anishkn.com.np/sitemap.xml

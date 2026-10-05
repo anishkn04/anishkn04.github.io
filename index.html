@@ -4,11 +4,78 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Anish Neupane" />
         <meta
             name="description"
-            content="Anish K. Neupane - Backend/Full-stack Engineer portfolio."
+            content="Anish Neupane (Anish Kumar Neupane, anishkn04) is a backend and full-stack software engineer in Kathmandu, Nepal. REST APIs with .NET 8, Ruby on Rails and Node.js, PostgreSQL, AWS, and two peer-reviewed ML publications."
         />
-        <title>Anish K. Neupane</title>
+        <title>Anish Neupane - Backend &amp; Full-stack Engineer in Kathmandu</title>
+        <link rel="canonical" href="https://anishkn.com.np/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Anish Neupane" />
+        <meta property="og:title" content="Anish Neupane - Backend &amp; Full-stack Engineer in Kathmandu" />
+        <meta
+            property="og:description"
+            content="Backend and full-stack software engineer in Kathmandu, Nepal. .NET 8, Ruby on Rails, Node.js, PostgreSQL, AWS. Co-author of two peer-reviewed ML publications."
+        />
+        <meta property="og:url" content="https://anishkn.com.np/" />
+        <meta property="og:image" content="https://anishkn.com.np/assets/og.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Anish Neupane, Backend and Full-stack Engineer, Kathmandu Nepal" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@anishkn04" />
+        <meta name="twitter:title" content="Anish Neupane - Backend &amp; Full-stack Engineer in Kathmandu" />
+        <meta
+            name="twitter:description"
+            content="Backend and full-stack software engineer in Kathmandu, Nepal. .NET 8, Ruby on Rails, Node.js, PostgreSQL, AWS."
+        />
+        <meta name="twitter:image" content="https://anishkn.com.np/assets/og.jpg" />
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "@id": "https://anishkn.com.np/#person",
+            "name": "Anish Neupane",
+            "alternateName": ["Anish Kumar Neupane", "Anish K. Neupane", "Neupane A.K.", "anishkn04"],
+            "url": "https://anishkn.com.np/",
+            "image": "https://anishkn.com.np/img/hero.jpg",
+            "jobTitle": "Backend & Full-stack Engineer",
+            "description": "Anish Neupane is a backend-focused full-stack software engineer in Kathmandu, Nepal, building REST APIs with .NET 8, Ruby on Rails and Node.js, backed by PostgreSQL, Redis, AWS, and automated testing.",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Kathmandu",
+                "addressCountry": "NP"
+            },
+            "email": "mailto:anishkn04@gmail.com",
+            "alumniOf": {
+                "@type": "CollegeOrUniversity",
+                "name": "Nepal College of Information Technology (NCIT), Pokhara University"
+            },
+            "knowsAbout": ["ASP.NET Core", "Ruby on Rails", "Node.js", "Express.js", "PostgreSQL", "Redis", "REST API design", "JWT authentication", "Background job processing", "AWS", "Docker", "LLM integration"],
+            "sameAs": [
+                "https://github.com/anishkn04",
+                "https://www.linkedin.com/in/anishkn04",
+                "https://x.com/anishkn04",
+                "https://www.facebook.com/anishkn04",
+                "https://medium.com/@anishkn04",
+                "https://gitlab.com/team-aergia/ai-native-project-management",
+                "https://doi.org/10.65091/icicset.v2i1.30",
+                "https://doi.org/10.65091/icicset.v2i1.20"
+            ]
+        }
+        </script>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "https://anishkn.com.np/#website",
+            "url": "https://anishkn.com.np/",
+            "name": "Anish Neupane",
+            "inLanguage": "en",
+            "author": { "@id": "https://anishkn.com.np/#person" }
+        }
+        </script>
         <link rel="stylesheet" href="styles/styles.css" />
         <link rel="icon" href="favicon.svg" type="image/svg+xml" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,21 +94,23 @@
     </head>
 
     <body class="main-content">
-        <main
-            class="single-canvas"
-            aria-label="Anish K. Neupane portfolio collage"
-        >
-            <div class="canvas-head">
-                <a
-                    class="brand"
-                    href="assets/resume.pdf"
-                    aria-label="Download CV"
-                >
+        <div class="single-canvas">
+            <header class="canvas-head">
+                <a class="brand" href="/" aria-label="Anish Neupane - home">
                     <span class="brand-copy">
-                        <strong>Anish K. Neupane</strong>
+                        <strong>Anish Neupane</strong>
                         <small>Backend / Full-stack Engineer</small>
                     </span>
                 </a>
+                <nav class="site-nav" aria-label="Primary">
+                    <a href="/" aria-current="page">Home</a>
+                    <a href="/about/">About</a>
+                    <a href="/work/">Work</a>
+                    <a href="/experience/">Experience</a>
+                    <a href="/certifications/">Certifications</a>
+                    <a href="/contact/">Contact</a>
+                    <a href="/resume/">Resume</a>
+                </nav>
                 <button
                     id="theme-toggle"
                     class="theme-toggle"
@@ -50,465 +119,86 @@
                 >
                     ☀️
                 </button>
-            </div>
+            </header>
 
-            <div
-                class="collage"
-                data-active="0"
-                aria-label="Interactive site collage"
-            >
-                <details
-                    class="collage-item is-active"
-                    data-index="0"
-                    data-tone="mint"
-                    open
-                >
-                    <summary class="collage-rail">
-                        <span class="collage-name"
-                            ><span class="collage-index">01</span> Home</span
-                        >
-                        <span class="collage-kicker">Intro</span>
-                    </summary>
-                    <div class="collage-body" id="home-div">
-                        <div class="collage-copy">
-                            <h1>Anish Kumar Neupane</h1>
-                            <p class="subtitle">Backend-Focused Full Stack Software Engineer</p>
-                            <p>
-                                Building resilient backend systems, high-performance
-                                RESTful APIs, and cloud-native applications that
-                                balance clean architecture with excellent user
-                                experience.
-                            </p>
-                            <div class="panel-links">
-                                <a href="assets/resume.pdf">Download CV</a>
-                                <a href="https://github.com/anishkn04" target="_blank" rel="noreferrer">GitHub</a>
-                                <a href="mailto:anishnep51@gmail.com">anishnep51@gmail.com</a>
-                                <a href="https://anishkn.com.np" target="_blank" rel="noreferrer">anishkn.com.np</a>
-                            </div>
-                        </div>
-                        <span
-                            class="collage-art collage-art--portrait"
-                            aria-hidden="true"
-                        >
-                            <img
-                                src="img/hero.jpg"
-                                alt="Photo of Anish Neupane"
-                            />
-                        </span>
+            <main class="page-main">
+                <article class="page" aria-labelledby="home-title">
+                    <div class="page-head">
+                        <span class="page-index">Anish Neupane - Kathmandu, Nepal</span>
+                        <span class="page-kicker">Intro</span>
                     </div>
-                </details>
-
-                <details class="collage-item" data-index="1" data-tone="peach">
-                    <summary class="collage-rail">
-                        <span class="collage-name"
-                            ><span class="collage-index">02</span> About</span
-                        >
-                        <span class="collage-kicker">Background</span>
-                    </summary>
-                    <div class="collage-body">
-                        <div class="collage-copy">
-                            <h2>Practical, collaborative engineer</h2>
-                            <p>
-                                I solve problems with software engineering,
-                                focusing on backend reliability, security, and
-                                clear APIs. I contribute to open-source and enjoy
-                                working with teams.
-                            </p>
-                            <div class="mini-grid">
-                                <article>
-                                    <strong>Location</strong>
-                                    <span>Kathmandu, Nepal</span>
-                                </article>
-                                
-                                <article>
-                                    <strong>Education</strong>
-                                    <span>BE in Software Engineering, Pokhara University (expected 2026)</span>
-                                </article>
-                                
-                                <article>
-                                    <strong>Languages</strong>
-                                    <span>Nepali, English, Hindi</span>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                </details>
-
-                <details
-                    class="collage-item"
-                    data-index="2"
-                    data-tone="lavender"
-                >
-                    <summary class="collage-rail">
-                        <span class="collage-name"
-                            ><span class="collage-index">03</span> Work</span
-                        >
-                        <span class="collage-kicker">Selected projects</span>
-                    </summary>
-                    <div class="collage-body">
-                        <div class="collage-copy">
-                            <h2>Selected projects and production work</h2>
-                            <p>Selected production and personal projects.</p>
-                            <div class="project-strip">
-                                <article>
-                                    <strong><a href="https://knowyourcandidate.live" target="_blank" rel="noreferrer">KnowYourCandidate</a></strong>
-                                    <span>Production portal (PHP, MariaDB) managing 3,000+ candidate profiles; SEO and performance focused.</span>
-                                    <div class="project-meta">
-                                        <div>Timeline: Nov 2025 – Feb 2026</div>
-                                        <div>Role: Architected backend, optimized queries and SEO metadata, deployed a secure public-facing portal</div>
-                                    </div>
-                                </article>
-                                <article>
-                                    <strong><a href="https://as.anishkn.com.np/" target="_blank" rel="noreferrer">ActiveStudy</a></strong>
-                                    <span>Full-stack Ruby on Rails study group platform (AWS EC2, PostgreSQL, Sidekiq).</span>
-                                    <div class="project-meta">
-                                        <div>Timeline: Jan 2026</div>
-                                        <div>Role: DB schema design, RBAC for groups, background digest emails, deployed on EC2 with Redis-backed Sidekiq</div>
-                                        <div>Repo: <a href="https://github.com/anishkn04/ActiveStudy" target="_blank" rel="noreferrer">github.com/anishkn04/ActiveStudy</a></div>
-                                    </div>
-                                </article>
-                                <article>
-                                    <strong><a href="https://github.com/anishkn04/AcadNet" target="_blank" rel="noreferrer">AcadNet</a></strong>
-                                    <span>React + Node (TypeScript) collaborative academic platform.</span>
-                                    <div class="project-meta">
-                                        <div>Timeline: May–Aug 2025</div>
-                                        <div>Role: Migrated persistence from MongoDB to PostgreSQL, designed permissioned file-sharing, implemented TypeScript-safe APIs</div>
-                                    </div>
-                                </article>
-                                <article>
-                                    <strong><a href="https://github.com/anishkn04/GoTellem" target="_blank" rel="noreferrer">GoTellem</a></strong>
-                                    <span>Real-time cross-platform message broadcaster (Discord, Facebook).</span>
-                                    <div class="project-meta">
-                                        <div>Timeline: May–Jun 2024</div>
-                                        <div>Role: Integrated Discord and Facebook APIs and built an automated polling engine for real-time data execution</div>
-                                    </div>
-                                </article>
-                                <article>
-                                    <strong><a href="https://github.com/anishkn04/Confessions" target="_blank" rel="noreferrer">Confessions</a></strong>
-                                    <span>Anonymous social-sharing web app with moderation tools and a PostgreSQL backend.</span>
-                                    <div class="project-meta">
-                                        <div>Focus: lightweight moderation workflows and simple UX</div>
-                                    </div>
-                                </article>
-                                <article>
-                                    <strong><a href="https://github.com/anishkn04/Remote_Command_Executor" target="_blank" rel="noreferrer">Remote Command Executor</a></strong>
-                                    <span>Utility for executing remote commands across networked systems with safer command handling.</span>
-                                </article>
-                                <article>
-                                    <strong><a href="https://anishkn.com.np/uigfConverter/" target="_blank" rel="noreferrer">uigfConverter</a></strong>
-                                    <span>Web utility for converting UIGF files, available as both a live tool and an open-source repository.</span>
-                                    <div class="project-meta">
-                                        <div>Live: <a href="https://anishkn.com.np/uigfConverter/" target="_blank" rel="noreferrer">anishkn.com.np/uigfConverter/</a></div>
-                                        <div>Repo: <a href="https://github.com/anishkn04/uigfConverter" target="_blank" rel="noreferrer">github.com/anishkn04/uigfConverter</a></div>
-                                    </div>
-                                </article>
-                                <article>
-                                    <strong><a href="https://github.com/anishkn04/LabReport" target="_blank" rel="noreferrer">LabReport Management System</a></strong>
-                                    <span>Academic lab report management system designed for efficient submission and tracking workflows.</span>
-                                </article>
-                                <article>
-                                    <strong><a href="https://github.com/anishkn04/JavaProject" target="_blank" rel="noreferrer">Java Notes Project</a></strong>
-                                    <span>Semester learning materials and Jakarta Servlet examples for core Java web development concepts.</span>
-                                </article>
-                                <article>
-                                    <strong><a href="https://github.com/noskofficial/sfd-website/tree/sfd-2024" target="_blank" rel="noreferrer">SFD 2024 Event Site (NOSK)</a></strong>
-                                    <span>Open-source event website contribution for Software Freedom Day 2024 under Nepal Open Source Klub.</span>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                </details>
-
-                <details class="collage-item" data-index="3" data-tone="mint">
-                    <summary class="collage-rail">
-                        <span class="collage-name"><span class="collage-index">04</span> Experience & Skills</span>
-                        <span class="collage-kicker">Background & tools</span>
-                    </summary>
-                    <div class="collage-body">
-                        <div class="collage-copy">
-                            <h2>Experience</h2>
-                            <div class="experience-list">
-                                <article>
-                                    <strong>Software Engineering Trainee (Ruby on Rails)</strong>
-                                    <span>Bajra Technologies, Kathmandu, Nepal (Nov 2025 – Jan 2026)</span>
-                                    <p>Built a full-stack Rails app in an agile sprint; implemented secure authentication (Devise/OmniAuth), background workers (Sidekiq), and Hotwire-driven UX. Covered integrations with RSpec tests.</p>
-                                </article>
-                                <article>
-                                    <strong>Freelance Backend Developer</strong>
-                                    <span>KnowYourCandidate (Nov 2025 – Feb 2026)</span>
-                                    <p>Delivered a PHP/MariaDB portal managing 3,000+ candidate profiles, focused on SEO-driven architecture, performance, and secure public data handling.</p>
-                                </article>
-                                <article>
-                                    <strong>Developer, Technical Committee</strong>
-                                    <span>Nepal Open Source Klub (NOSK) (Aug 2024 – May 2025)</span>
-                                    <p>Managed system upgrades, reviewed community PRs, and led technical deployments for regional events.</p>
-                                </article>
-                                <article>
-                                    <strong>Teacher</strong>
-                                    <span>Radiant Public Boarding School (Jul 2024 – Nov 2025)</span>
-                                    <p>Taught students and mentored community leadership while developing communication and organization skills.</p>
-                                </article>
-                            </div>
-
-                            <h2>Technical Skills</h2>
-                            <table class="skills-table">
-                                <tr><th>Category</th><th>Technologies & Tools</th></tr>
-                                <tr><td>Languages</td><td>JavaScript, TypeScript, Python, Ruby, C#, PHP, Bash</td></tr>
-                                <tr><td>Backend & Frameworks</td><td>Node.js, Express, Ruby on Rails, .NET Core, RESTful API design</td></tr>
-                                <tr><td>Frontend & UI</td><td>React, HTML5, CSS3, TailwindCSS, Hotwire, Stimulus</td></tr>
-                                <tr><td>Databases & Caching</td><td>PostgreSQL, MariaDB, MongoDB, DynamoDB, Redis</td></tr>
-                                <tr><td>Cloud & DevOps</td><td>AWS (EC2, Lambda, S3, DynamoDB, API Gateway), Azure, Docker, Linux, Git, CI/CD</td></tr>
-                                <tr><td>Testing</td><td>RSpec, unit & integration testing</td></tr>
-                                <tr><td>Networking</td><td>TCP/IP, subnetting, Linux networking</td></tr>
-                            </table>
-                        </div>
-                    </div>
-                </details>
-
-                <details class="collage-item" data-index="4" data-tone="peach">
-                    <summary class="collage-rail">
-                        <span class="collage-name"><span class="collage-index">05</span> Certifications</span>
-                        <span class="collage-kicker">Training & credentials</span>
-                    </summary>
-                    <div class="collage-body">
-                        <div class="collage-copy">
-                            <h2>Selected certifications and publications.</h2>
-                            <h3 class="section-label">Publications</h3>
-                            <div class="pub-list">
-                                <article class="pub-card">
-                                    <span class="pub-n" aria-hidden="true"
-                                        >01</span
-                                    >
-                                    <div class="pub-content">
-                                        <p class="pub-title">
-                                            <a
-                                                href="https://doi.org/10.65091/icicset.v2i1.30"
-                                                target="_blank"
-                                                rel="noreferrer"
-                                                >Evaluation of Machine Learning
-                                                Techniques in Winner Predicting
-                                                of The Hundred Games</a
-                                            >
-                                        </p>
-                                        <footer class="pub-meta">
-                                            <span class="pub-venue"
-                                                >ICICSET 2025</span
-                                            >
-                                            <a
-                                                class="pub-doi"
-                                                href="https://doi.org/10.65091/icicset.v2i1.30"
-                                                target="_blank"
-                                                rel="noreferrer"
-                                                >doi.org ↗</a
-                                            >
-                                        </footer>
-                                    </div>
-                                </article>
-                                <article class="pub-card">
-                                    <span class="pub-n" aria-hidden="true"
-                                        >02</span
-                                    >
-                                    <div class="pub-content">
-                                        <p class="pub-title">
-                                            <a
-                                                href="https://doi.org/10.65091/icicset.v2i1.20"
-                                                target="_blank"
-                                                rel="noreferrer"
-                                                >Analyzing Behavior of
-                                                Agricultural Commodities in
-                                                Kalimati Tarkari Market using
-                                                Machine Learning Technique and
-                                                Prediction Strategies</a
-                                            >
-                                        </p>
-                                        <footer class="pub-meta">
-                                            <span class="pub-venue"
-                                                >ICICSET 2025</span
-                                            >
-                                            <a
-                                                class="pub-doi"
-                                                href="https://doi.org/10.65091/icicset.v2i1.20"
-                                                target="_blank"
-                                                rel="noreferrer"
-                                                >doi.org ↗</a
-                                            >
-                                        </footer>
-                                    </div>
-                                </article>
-                            </div>
-                            <h3 class="section-label">Certifications</h3>
-                            <div class="pub-list">
-                                <article class="pub-card">
-                                    <span class="pub-n" aria-hidden="true"
-                                        >01</span
-                                    >
-                                    <div class="pub-content">
-                                        <p class="pub-title">
-                                            <a
-                                                href="https://aws.amazon.com/training/aws-academy/"
-                                                target="_blank"
-                                                rel="noreferrer"
-                                                >AWS Academy Cloud
-                                                Foundations</a
-                                            >
-                                        </p>
-                                        <footer class="pub-meta">
-                                            <span class="pub-venue"
-                                                >AWS Academy</span
-                                            >
-                                        </footer>
-                                    </div>
-                                </article>
-                                <article class="pub-card">
-                                    <span class="pub-n" aria-hidden="true"
-                                        >02</span
-                                    >
-                                    <div class="pub-content">
-                                        <p class="pub-title">
-                                            <a
-                                                href="https://www.freecodecamp.org/news/relational-databases/"
-                                                target="_blank"
-                                                rel="noreferrer"
-                                                >Relational Databases</a
-                                            >
-                                        </p>
-                                        <footer class="pub-meta">
-                                            <span class="pub-venue"
-                                                >freeCodeCamp</span
-                                            >
-                                        </footer>
-                                    </div>
-                                </article>
-                                <article class="pub-card">
-                                    <span class="pub-n" aria-hidden="true"
-                                        >03</span
-                                    >
-                                    <div class="pub-content">
-                                        <p class="pub-title">
-                                            <a
-                                                href="https://www.postman.com/"
-                                                target="_blank"
-                                                rel="noreferrer"
-                                                >Postman: API Fundamentals</a
-                                            >
-                                        </p>
-                                        <footer class="pub-meta">
-                                            <span class="pub-venue"
-                                                >Postman / Badgr</span
-                                            >
-                                        </footer>
-                                    </div>
-                                </article>
-                                <article class="pub-card">
-                                    <span class="pub-n" aria-hidden="true"
-                                        >04</span
-                                    >
-                                    <div class="pub-content">
-                                        <p class="pub-title">
-                                            <a
-                                                href="https://www.datacamp.com/courses/intermediate-git"
-                                                target="_blank"
-                                                rel="noreferrer"
-                                                >Intermediate Git</a
-                                            >
-                                        </p>
-                                        <footer class="pub-meta">
-                                            <span class="pub-venue"
-                                                >DataCamp</span
-                                            >
-                                        </footer>
-                                    </div>
-                                </article>
-                                <article class="pub-card">
-                                    <span class="pub-n" aria-hidden="true"
-                                        >05</span
-                                    >
-                                    <div class="pub-content">
-                                        <p class="pub-title">
-                                            <a
-                                                href="https://www.netacad.com/courses/cybersecurity/intro-to-cybersecurity"
-                                                target="_blank"
-                                                rel="noreferrer"
-                                                >Introduction to
-                                                Cybersecurity</a
-                                            >
-                                        </p>
-                                        <footer class="pub-meta">
-                                            <span class="pub-venue"
-                                                >Cisco Networking Academy</span
-                                            >
-                                        </footer>
-                                    </div>
-                                </article>
-                                <article class="pub-card">
-                                    <span class="pub-n" aria-hidden="true"
-                                        >06</span
-                                    >
-                                    <div class="pub-content">
-                                        <p class="pub-title">
-                                            <a
-                                                href="https://www.udemy.com/"
-                                                target="_blank"
-                                                rel="noreferrer"
-                                                >Python: The Professional Guide
-                                                For Beginners</a
-                                            >
-                                        </p>
-                                        <footer class="pub-meta">
-                                            <span class="pub-venue">Udemy</span>
-                                        </footer>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                </details>
-
-                <details class="collage-item" data-index="5" data-tone="sky">
-                    <summary class="collage-rail">
-                        <span class="collage-name"><span class="collage-index">06</span> Contact</span>
-                    
-                        <span class="collage-kicker">Reach out</span>
-                    </summary>
-                    <div class="collage-body">
-                        <div class="collage-copy">
-                            <h2>Let's build something clear and useful.</h2>
+                    <div class="page-body">
+                        <div class="hero-split">
+                            <div class="hero-copy">
+                                <h1 id="home-title">Anish Neupane</h1>
+                                <p class="subtitle">Backend-Focused Full Stack Software Engineer</p>
                                 <p>
-                                Reach out to discuss a software project,
-                                collaboration, or opportunities in backend/full-stack
-                                engineering.
-                            </p>
-                            <dl class="contact-list">
-                                <div>
-                                    <dt>Location</dt>
-                                    <dd>Kathmandu, Nepal</dd>
+                                    Building resilient backend systems, high-performance
+                                    RESTful APIs, and cloud-native applications that
+                                    balance clean architecture with excellent user
+                                    experience. Production work across .NET 8, Ruby on
+                                    Rails, Node.js, and PHP, backed by PostgreSQL,
+                                    Redis, AWS, and automated testing.
+                                </p>
+                                <div class="panel-links">
+                                    <a href="/assets/anish-neupane-cv.pdf">Download CV</a>
+                                    <a href="https://github.com/anishkn04" target="_blank" rel="noreferrer">GitHub</a>
+                                    <a href="https://www.linkedin.com/in/anishkn04" target="_blank" rel="noreferrer">LinkedIn</a>
+                                    <a href="mailto:anishkn04@gmail.com">anishkn04@gmail.com</a>
                                 </div>
-                                <div>
-                                    <dt>Email</dt>
-                                    <dd>
-                                        <a href="mailto:anishnep51@gmail.com">anishnep51@gmail.com</a>
-                                    </dd>
-                                </div>
-                                <!-- Phone removed as requested -->
-                                <div>
-                                    <dt>Website</dt>
-                                    <dd>
-                                        <a href="https://anishkn.com.np" target="_blank" rel="noreferrer">anishkn.com.np</a>
-                                    </dd>
-                                </div>
-                            </dl>
-                            <div class="social-row" aria-label="Social links">
-                                <a href="https://www.facebook.com/anishkn04" target="_blank" rel="noreferrer"><i class="fab fa-facebook-f"></i></a>
-                                <a href="https://www.x.com/anishkn04" target="_blank" rel="noreferrer"><i class="fab fa-twitter"></i></a>
-                                <a href="https://www.linkedin.com/in/anishkn04" target="_blank" rel="noreferrer"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://www.github.com/anishkn04" target="_blank" rel="noreferrer"><i class="fab fa-github"></i></a>
-                                <a href="https://anishkn.com.np" target="_blank" rel="noreferrer"><i class="fas fa-globe"></i></a>
                             </div>
+                            <span class="collage-art collage-art--portrait" aria-hidden="true">
+                                <img
+                                    src="img/hero.jpg"
+                                    alt="Photo of Anish Neupane"
+                                    width="1277"
+                                    height="1920"
+                                    fetchpriority="high"
+                                />
+                            </span>
                         </div>
                     </div>
-                </details>
-            </div>
-        </main>
+                </article>
+
+                <nav class="page-grid" aria-label="Site sections">
+                    <a href="/about/">
+                        <span class="card-index">01 - About</span>
+                        <strong>Background</strong>
+                        <span>Practical, collaborative engineer in Kathmandu. Education, languages, and how the names connect.</span>
+                    </a>
+                    <a href="/work/">
+                        <span class="card-index">02 - Work</span>
+                        <strong>Selected projects</strong>
+                        <span>AI-native project management, Rails study groups, academic platforms, and open-source tools.</span>
+                    </a>
+                    <a href="/experience/">
+                        <span class="card-index">03 - Experience</span>
+                        <strong>Roles &amp; skills</strong>
+                        <span>Jog Chain, Bajra Technologies, freelance production work, and the full technical toolkit.</span>
+                    </a>
+                    <a href="/certifications/">
+                        <span class="card-index">04 - Certifications</span>
+                        <strong>Research &amp; credentials</strong>
+                        <span>Two peer-reviewed ICICSET 2025 publications and six industry certifications.</span>
+                    </a>
+                    <a href="/contact/">
+                        <span class="card-index">05 - Contact</span>
+                        <strong>Reach out</strong>
+                        <span>Software projects, collaboration, or backend and full-stack engineering opportunities.</span>
+                    </a>
+                    <a href="/resume/">
+                        <span class="card-index">06 - Resume</span>
+                        <strong>CV</strong>
+                        <span>One-page resume as readable HTML and downloadable PDF.</span>
+                    </a>
+                </nav>
+            </main>
+
+            <footer class="site-footer">
+                <span>Anish Neupane - Backend &amp; Full-stack Engineer, Kathmandu, Nepal</span>
+                <span><a href="https://github.com/anishkn04" target="_blank" rel="noreferrer">github.com/anishkn04</a></span>
+            </footer>
+        </div>
 
         <script src="app.js"></script>
     </body>
